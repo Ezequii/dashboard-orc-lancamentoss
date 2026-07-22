@@ -1,18 +1,27 @@
-# Dashboard de Orçamentos — Versão 5
+# Controle de Orçamentos de Serviços – v2
 
-Versão estática para GitHub + Cloudflare, sem D1 e sem autenticação.
+## Executar
+```bash
+npm install
+npm run dev
+```
 
-## Novos filtros
-- Pesquisa geral
-- Etapas múltiplas
-- Líderes múltiplos
-- Fornecedores múltiplos com pesquisa
-- Período de recebimento e atalhos
-- Dias parados
-- Faixa de valor
-- Situação documental
-- Etiquetas removíveis
-- Salvar e carregar visualização no navegador
+## Publicar no Cloudflare
+```bash
+npx wrangler login
+npm run deploy
+```
 
-## Publicação
-Descompacte, copie os arquivos para a pasta local do repositório `dashboard-orc-lancamentos`, faça commit e push pelo GitHub Desktop. O Cloudflare conectado ao GitHub fará o build automaticamente.
+### Regras
+- Líder = Solicitante
+- Serviço = número do orçamento único
+- Valor = Valor Total
+- Dias parados são calculados diariamente no navegador
+
+## Versão 3
+- Responsividade para TVs 4K/Full HD, monitores, notebooks, tablets e celulares
+- Tabela convertida em cartões no celular
+- Chave de serviço: fornecedor + número do orçamento
+- Tooltips com nomes amigáveis
+- Legenda mensal em ordem Recebidos / Concluídos
+- Drawer com fornecedor no cabeçalho e valores com centavos
