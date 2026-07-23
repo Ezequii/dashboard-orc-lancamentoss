@@ -82,3 +82,52 @@ body.tvMode{margin:0!important;padding:0!important;background:#f4f6f4!important;
 @media (min-width:2500px) and (min-height:1300px){
   .tvMode main{padding:22px 34px!important;gap:16px!important}.tvMode h1{font-size:50px!important}.tvMode header p{font-size:19px!important}.tvMode .kpis{height:145px!important}.tvMode .kpi span{font-size:17px!important}.tvMode .kpi>b{font-size:38px!important}.tvMode .dashboardContent.tvAll{gap:16px 20px!important}.tvMode .dashboardContent.tvAll .card h2{font-size:25px!important}.tvMode .dashboardContent.tvAll .cardSub{font-size:15px!important}.tvMode .barValue{font-size:17px!important}.tvMode .flow span,.tvMode .stageLegend p,.tvMode .stageLegend p b{font-size:17px!important}
 }
+
+/* v5.1 - acabamento final do Modo TV */
+.tvMode main{grid-template-rows:auto auto minmax(0,1fr)!important}
+.tvMode header{padding-right:clamp(145px,11vw,195px)!important}
+.tvMode .headerSubtitle{display:none!important}
+.tvMode .kpis{height:clamp(64px,8vh,92px)!important}
+.tvMode .dashboardContent.tvAll{grid-template-rows:minmax(0,1.18fr) minmax(0,.95fr) minmax(0,1.12fr)!important}
+
+/* Rankings: uso integral da altura útil, barras mais consistentes e textos equilibrados. */
+.tvMode .summaryGrid .recharts-wrapper,.tvMode .summaryGrid .recharts-surface{height:100%!important}
+.tvMode .summaryGrid .recharts-bar-rectangle path{shape-rendering:geometricPrecision}
+.tvMode .summaryGrid .recharts-cartesian-axis-tick-value{font-size:clamp(9px,.67vw,13px)!important}
+.tvMode .summaryGrid .recharts-label-list text{font-size:clamp(9px,.66vw,12px)!important;font-weight:700!important}
+
+/* Fluxo: centralização real dentro do cartão. */
+.tvMode .processGrid>.card:first-child{display:flex!important;flex-direction:column!important}
+.tvMode .processGrid>.card:first-child .flow{flex:1!important;height:auto!important;min-height:0!important;align-items:center!important;justify-content:center!important;padding:0 clamp(8px,1vw,18px) clamp(2px,.4vh,6px)!important}
+.tvMode .flow>div{display:flex!important;flex-direction:column!important;align-items:center!important;justify-content:center!important}
+.tvMode .flowArrow{color:#aeb9b3!important;stroke-width:2.2!important}
+
+/* Valor por etapa: rosca menor, centralizada e com margem de segurança. */
+.tvMode .processGrid>.card:nth-child(2){display:flex!important;flex-direction:column!important}
+.tvMode .processGrid>.card:nth-child(2)>.pie{flex:1!important;height:auto!important;min-height:0!important;padding:clamp(2px,.4vh,6px) 0!important}
+.tvMode .donutWrap{width:40%!important;height:92%!important;align-self:center!important;margin-left:1%!important}
+.tvMode .donutWrap .recharts-responsive-container{height:100%!important}
+.tvMode .stageLegend{padding:0 clamp(6px,.6vw,13px)!important;align-self:center!important}
+
+/* Evolução mensal: recebe mais altura e usa toda a área vertical. */
+.tvMode .monthly{display:flex!important;flex-direction:column!important}
+.tvMode .monthly .recharts-responsive-container{flex:1 1 auto!important;height:auto!important;min-height:0!important;margin-top:2px!important}
+.tvMode .monthly .recharts-wrapper,.tvMode .monthly .recharts-surface{height:100%!important}
+.tvMode .monthly .recharts-cartesian-axis-tick-value{font-size:clamp(8px,.62vw,12px)!important}
+.tvMode .monthly .recharts-legend-wrapper{top:0!important}
+
+/* Full HD 1920x1080 e alturas próximas. */
+@media (min-width:1700px) and (min-height:900px) and (max-height:1200px){
+  .tvMode main{padding:9px 20px 10px!important;gap:7px!important}
+  .tvMode header{height:55px!important;min-height:55px!important}.tvMode header small{font-size:9px!important}.tvMode h1{font-size:27px!important}.tvMode .kpis{height:76px!important}.tvMode .dashboardContent.tvAll{grid-template-rows:minmax(0,1.18fr) minmax(0,.92fr) minmax(0,1.18fr)!important;gap:7px 10px!important}.tvMode .dashboardContent.tvAll .card{padding:9px 14px!important}.tvMode .dashboardContent.tvAll .card h2{font-size:14px!important}.tvMode .dashboardContent.tvAll .cardSub{font-size:8px!important}.tvMode .donutWrap{width:38%!important;height:90%!important}.tvMode .monthly .recharts-responsive-container{min-height:155px!important}
+}
+
+/* Full HD com barra do Windows ou navegador reduzindo a altura. */
+@media (min-width:1500px) and (max-height:900px){
+  .tvMode header{height:44px!important;min-height:44px!important}.tvMode h1{font-size:23px!important}.tvMode .kpis{height:60px!important}.tvMode .kpi>div{width:27px!important;height:27px!important}.tvMode .kpi>b{font-size:17px!important}.tvMode .dashboardContent.tvAll{grid-template-rows:minmax(0,1.12fr) minmax(0,.88fr) minmax(0,1.16fr)!important}.tvMode .donutWrap{width:36%!important;height:88%!important}.tvMode .flow b{width:41px!important;height:41px!important}.tvMode .monthly .recharts-responsive-container{min-height:120px!important}
+}
+
+/* 4K: mantém proporções e amplia legibilidade sem criar vazios. */
+@media (min-width:2500px) and (min-height:1300px){
+  .tvMode .dashboardContent.tvAll{grid-template-rows:minmax(0,1.16fr) minmax(0,.92fr) minmax(0,1.15fr)!important}.tvMode .donutWrap{width:42%!important;height:94%!important}.tvMode .summaryGrid .recharts-cartesian-axis-tick-value{font-size:18px!important}.tvMode .summaryGrid .recharts-label-list text{font-size:18px!important}.tvMode .monthly .recharts-cartesian-axis-tick-value{font-size:16px!important}
+}
