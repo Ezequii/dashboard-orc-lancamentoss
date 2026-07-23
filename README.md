@@ -1,18 +1,20 @@
-# Dashboard de Orçamentos — v5.2
+# Dashboard de Orçamentos — v5.3
 
-Polimento visual do Modo TV.
+Revisão prioritária de legibilidade e aproveitamento de espaço no Modo TV.
 
-## Ajustes
-- Barras melhor distribuídas verticalmente.
-- Barras ligeiramente mais espessas no Modo TV.
-- Área maior para nomes de fornecedores.
-- Fluxo com conectores mais visíveis e melhor espaçamento.
-- Rosca e legenda aproximadas e centralizadas.
-- Gráfico Recebidos x Lançados com linhas e pontos mais fortes.
-- Eixos e legendas com maior contraste.
-- Data da atualização exibida discretamente ao lado do título.
-- Ajustes específicos para Full HD, pouca altura útil e 4K.
-- Visualização normal permanece limpa e organizada por seções.
+## Melhorias
+- Títulos, subtítulos, eixos, rankings e legendas maiores.
+- Rankings mais baixos, liberando área para Recebidos x Lançados.
+- Fluxo ampliado e distribuído por toda a largura.
+- Rosca e legenda reorganizadas.
+- Valor e percentual apresentados por etapa.
+- Percentual em processo e concluído nos KPIs.
+- Valores monetários compactos no Modo TV.
+- Último mês destacado com variação em relação ao mês anterior.
+- Linhas e pontos mensais maiores.
+- Atualização automática da página a cada 5 minutos no Modo TV.
+- Contagem regressiva para a próxima atualização.
+- Botão Sair do modo TV desaparece após 5 segundos sem interação e retorna com movimento do mouse ou teclado.
 
 ## Atualização dos dados
 Substitua `atualizar_dados/CONTROLE_DE_REQUISICOES_2026.xlsx`, faça commit e push pelo GitHub Desktop e aguarde a Action ficar verde.
