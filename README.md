@@ -1,27 +1,12 @@
-# Controle de Orçamentos de Serviços – v2
+# Dashboard de Orçamentos — v4.2
 
-## Executar
-```bash
-npm install
-npm run dev
-```
+Versão 4 Premium com seleção múltipla.
 
-## Publicar no Cloudflare
-```bash
-npx wrangler login
-npm run deploy
-```
+- Etapa, líder e fornecedor permitem múltiplas escolhas.
+- Líder e fornecedor têm pesquisa interna.
+- Botões Selecionar todos, Limpar e Aplicar.
+- Resumo `primeiro selecionado +N` no filtro.
+- Chips removíveis abaixo dos filtros.
+- Tudo inicia sem seleção.
 
-### Regras
-- Líder = Solicitante
-- Serviço = número do orçamento único
-- Valor = Valor Total
-- Dias parados são calculados diariamente no navegador
-
-## Versão 3
-- Responsividade para TVs 4K/Full HD, monitores, notebooks, tablets e celulares
-- Tabela convertida em cartões no celular
-- Chave de serviço: fornecedor + número do orçamento
-- Tooltips com nomes amigáveis
-- Legenda mensal em ordem Recebidos / Concluídos
-- Drawer com fornecedor no cabeçalho e valores com centavos
+Para publicar: descompacte, substitua os arquivos na pasta local do repositório `dashboard-orc-lancamentos`, faça commit e push pelo GitHub Desktop.

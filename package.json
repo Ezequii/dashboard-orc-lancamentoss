@@ -1,1 +1,22 @@
-{"name":"amaggi-orcamentos-dashboard","private":true,"version":"4.0.0","type":"module","scripts":{"dev":"vite","build":"vite build","deploy":"npm run build && wrangler deploy"},"dependencies":{"@vitejs/plugin-react":"latest","vite":"latest","react":"latest","react-dom":"latest","lucide-react":"latest","recharts":"latest"},"devDependencies":{"wrangler":"latest"}}
+{
+  "name": "dashboard-orc-lancamentos",
+  "private": true,
+  "version": "4.2.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "deploy": "npm run build && wrangler deploy"
+  },
+  "dependencies": {
+    "@vitejs/plugin-react": "latest",
+    "vite": "latest",
+    "react": "latest",
+    "react-dom": "latest",
+    "lucide-react": "latest",
+    "recharts": "latest"
+  },
+  "devDependencies": {
+    "wrangler": "latest"
+  }
+}
