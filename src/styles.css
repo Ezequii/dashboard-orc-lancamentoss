@@ -25,3 +25,25 @@ header small{font-size:10px!important;letter-spacing:2.1px!important}header p{fo
 }
 
 @media(max-width:900px){.headerTools{position:static;margin-top:12px;flex-wrap:wrap}.headerTools .lastUpdate{order:1}.tvButton{order:2}.tvButton.iconOnly{display:none}}
+
+/* v4.7 - modo painel de TV: todos os gráficos em uma tela Full HD */
+@media (min-width:1600px) and (min-height:800px) and (max-height:1200px){
+  html,body,#root{height:100%;overflow:hidden}
+  body{background:#d9d9de}
+  .app{height:calc(100vh - 16px)!important;min-height:0!important;width:calc(100% - 16px)!important;margin:8px auto!important;grid-template-columns:82px 1fr!important;overflow:hidden!important;border-radius:22px!important}
+  .app>aside{padding:15px 10px!important}.app>aside>b{width:46px!important;height:46px!important;margin-bottom:18px!important}.app>aside>button{width:52px!important;height:52px!important}.app>aside svg{width:23px!important}
+  main{height:100%;overflow:hidden;padding:14px 24px 16px!important;display:flex;flex-direction:column}
+  header{flex:0 0 72px;margin:0 0 8px!important}header small{font-size:10px!important}h1{font-size:29px!important;margin:3px 0!important}header p{font-size:12px!important}.headerTools{top:0!important}.lastUpdate{font-size:10px!important;padding:8px 11px!important}.tvButton{min-height:36px!important;font-size:10px!important}.tvButton.iconOnly{width:36px!important}
+  .filters{flex:0 0 auto;margin:0 0 8px!important}.filtersHidden{height:32px!important}.filterSummary{font-size:10px!important;padding:8px 12px!important;height:32px!important}.filtersVisible .top{height:42px!important}.filtersVisible .search{min-height:42px!important}.filtersVisible .filterRow{margin-top:6px!important}.filtersVisible .multi,.filtersVisible .date,.filtersVisible .clear{min-height:46px!important}.filtersVisible .multi>button{height:46px!important}.filtersVisible .multi em,.filtersVisible .date em{font-size:8px!important}.filtersVisible .multi b,.filtersVisible .date input{font-size:11px!important}
+  .kpis{flex:0 0 90px;gap:10px!important;margin-bottom:10px!important}.kpi{min-height:90px!important;height:90px!important;padding:11px 14px!important;border-radius:16px!important;display:grid;grid-template-columns:34px 1fr;grid-template-rows:25px 1fr;column-gap:9px;align-items:center}.kpi>div{grid-row:1/3;width:34px!important;height:34px!important;margin:0!important}.kpi svg{width:18px!important}.kpi span{font-size:11px!important;align-self:end}.kpi>b{font-size:22px!important;margin:0!important;align-self:start;white-space:nowrap}
+  .grid{flex:0 0 445px;display:grid!important;grid-template-columns:1fr 1fr!important;grid-template-rows:235px 200px!important;gap:10px!important;margin-bottom:10px!important}.grid>.card{height:100%;margin:0!important;padding:13px 17px!important;border-radius:18px!important;overflow:hidden}.grid>.card h2{font-size:15px!important}.grid>.card .cardSub{font-size:9px!important;margin-bottom:3px!important}.barValue{font-size:11px!important}.flow{height:150px!important;gap:10px!important}.flow>div{min-width:91px!important}.flow b{width:58px!important;height:58px!important;border-radius:18px!important;font-size:19px!important}.flow span{font-size:10px!important;margin-top:7px!important}.flowArrow{width:18px!important}.pie{height:155px!important;min-height:0!important}.donutWrap{height:160px!important;width:46%!important}.donutWrap .recharts-responsive-container{height:160px!important}.donutCenter b{font-size:15px!important}.donutCenter span{font-size:8px!important}.stageLegend p{font-size:10px!important;margin:8px 0!important}.stageLegend p b{font-size:10px!important}
+  .monthly{flex:1 1 auto;min-height:175px!important;height:auto!important;margin:0!important;padding:12px 18px!important;border-radius:18px!important;overflow:hidden}.monthly h2{font-size:15px!important}.monthly .cardSub{font-size:9px!important;margin-bottom:0!important}.monthly .recharts-responsive-container{height:calc(100% - 34px)!important;min-height:145px!important}.monthly .recharts-legend-wrapper{font-size:10px!important}
+  .tableCard{flex:1 1 auto;min-height:0;margin:0!important;padding-top:13px!important}.table{max-height:calc(100vh - 240px)!important}.tableTitle{padding-bottom:7px!important}.tableTitle h2{font-size:16px!important}.tableTitle small{font-size:10px!important}.table th{font-size:9px!important}.table td{font-size:11px!important;height:46px!important}.badge,.day{font-size:9px!important}
+}
+
+/* Com filtros abertos na TV, mantém os gráficos legíveis e permite rolagem controlada. */
+@media (min-width:1600px) and (min-height:800px) and (max-height:1200px){
+  main:has(.filtersVisible){overflow-y:auto!important}
+  main:has(.filtersVisible) .grid{flex-basis:445px}
+  main:has(.filtersVisible) .monthly{min-height:190px!important}
+}
