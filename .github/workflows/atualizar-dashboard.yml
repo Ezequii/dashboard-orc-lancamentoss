@@ -2,17 +2,23 @@ name: Atualizar dados do dashboard
 on:
   push:
     branches: [main]
-    paths: ['atualizar_dados/CONTROLE_DE_REQUISICOES_2026.xlsx','scripts/atualizar_dados.py']
+    paths:
+      - 'atualizar_dados/CONTROLE_DE_REQUISICOES_2026.xlsx'
+      - 'scripts/atualizar_dados.py'
   workflow_dispatch:
-permissions: {contents: write}
+permissions:
+  contents: write
 jobs:
   atualizar:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-        with: {ref: main, fetch-depth: 0}
+        with:
+          ref: main
+          fetch-depth: 0
       - uses: actions/setup-python@v5
-        with: {python-version: '3.12'}
+        with:
+          python-version: '3.12'
       - run: pip install openpyxl==3.1.5
       - run: python scripts/atualizar_dados.py
       - run: npm ci && npm run build
