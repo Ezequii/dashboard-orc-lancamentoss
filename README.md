@@ -1,8 +1,9 @@
-# Dashboard de Orçamentos v5.2.2
-Projeto completo com visualização normal, Modo TV, filtros múltiplos, acompanhamento e atualização automática pelo GitHub Actions.
+# Dashboard v5.2.3 — Samsung 55
+Projeto completo calibrado pelas fotos reais da TV Samsung de 55 polegadas.
 
-## Publicar
-Substitua todo o conteúdo da pasta local do repositório, preservando apenas a pasta oculta `.git`. Faça commit e push pelo GitHub Desktop.
-
-## Atualizar dados
-Substitua `atualizar_dados/CONTROLE_DE_REQUISICOES_2026.xlsx`, faça commit e push. A Action gera o JSON e o Cloudflare publica.
+- Modo TV com até sete líderes e fornecedores.
+- Rosca com tamanho mínimo.
+- Fluxo ampliado.
+- Gráfico mensal com mais área útil.
+- Visualização normal sem rolagem horizontal.
+- Atualização Excel → JSON pelo GitHub Actions.
