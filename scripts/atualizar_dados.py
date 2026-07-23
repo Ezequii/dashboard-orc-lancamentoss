@@ -1,105 +1,30 @@
 from pathlib import Path
-from datetime import datetime, date
+from datetime import datetime,date
 from zoneinfo import ZoneInfo
 import json
 from openpyxl import load_workbook
-
-ROOT = Path(__file__).resolve().parents[1]
-SOURCE = ROOT / "atualizar_dados" / "CONTROLE_DE_REQUISICOES_2026.xlsx"
-SHEET = "Acompanhamento RC 2026"
-
-
-def clean(value):
-    if value in (None, "", "*", "-"):
-        return None
-    if isinstance(value, (datetime, date)):
-        return value.strftime("%Y-%m-%d")
-    if isinstance(value, str):
-        value = " ".join(value.replace("\u00a0", " ").split()).strip()
-        return value or None
-    return value
-
-
-def number(value):
-    try:
-        return float(value or 0)
-    except (TypeError, ValueError):
-        return 0.0
-
-
-def normalize_status(value):
-    key = str(value or "").strip().upper()
-    return {
-        "CONCLUÍDO": "Concluído",
-        "CONCLUIDO": "Concluído",
-        "FALTA NF": "Falta NF",
-        "FALTA O PEDIDO": "Falta pedido",
-        "FALTA PEDIDO": "Falta pedido",
-        "FALTA LANÇAMENTO": "Falta lançamento",
-        "FALTA LANCAMENTO": "Falta lançamento",
-    }.get(key, str(value or "Não informado").strip())
-
-
-workbook = load_workbook(SOURCE, data_only=True, read_only=True)
-worksheet = workbook[SHEET]
-records = []
-issues = []
-
-for row_number, row in enumerate(
-    worksheet.iter_rows(min_row=3, max_col=18, values_only=True), start=3
-):
-    if not clean(row[16]):
-        continue
-    (
-        received, launched, prefix, equipment, supplier, budget,
-        service_value, parts_value, total_value, requester,
-        service_order, requisition, order, order_date, invoice,
-        invoice_date, status, notes,
-    ) = row
-    record = {
-        "id": row_number - 2,
-        "recebimento": clean(received),
-        "lancamento": clean(launched),
-        "prefixo": clean(prefix),
-        "equipamento": clean(equipment),
-        "fornecedor": clean(supplier),
-        "orcamento": clean(budget),
-        "valorServico": number(service_value),
-        "valorPecas": number(parts_value),
-        "valorTotal": number(total_value) if clean(total_value) is not None else number(service_value) + number(parts_value),
-        "solicitante": clean(requester),
-        "ordemServico": clean(service_order),
-        "requisicao": clean(requisition),
-        "pedido": clean(order),
-        "dataPedido": clean(order_date),
-        "nf": clean(invoice),
-        "dataNF": clean(invoice_date),
-        "status": normalize_status(status),
-        "observacoes": clean(notes),
-    }
-    if not record["fornecedor"]:
-        issues.append(f"Linha {row_number}: fornecedor vazio")
-    if record["valorTotal"] < 0:
-        issues.append(f"Linha {row_number}: valor total negativo")
-    records.append(record)
-
-(ROOT / "src" / "data" / "orcamentos.json").write_text(
-    json.dumps(records, ensure_ascii=False, separators=(",", ":")), encoding="utf-8"
-)
-now = datetime.now(ZoneInfo("America/Cuiaba"))
-(ROOT / "src" / "data" / "meta.json").write_text(
-    json.dumps(
-        {
-            "atualizadoEm": now.isoformat(timespec="seconds"),
-            "atualizadoEmTexto": now.strftime("%d/%m/%Y às %H:%M"),
-            "arquivo": SOURCE.name,
-            "linhasProcessadas": len(records),
-            "inconsistencias": len(issues),
-            "origem": SOURCE.name,
-        },
-        ensure_ascii=False,
-        indent=2,
-    ),
-    encoding="utf-8",
-)
-print(f"OK: {len(records)} registros; {len(issues)} inconsistências")
+R=Path(__file__).resolve().parents[1];f=R/'atualizar_dados/CONTROLE_DE_REQUISICOES_2026.xlsx';w=load_workbook(f,data_only=True,read_only=True)['Acompanhamento RC 2026']
+def c(v):
+ if v in(None,'','*','-'):return None
+ if isinstance(v,(datetime,date)):return v.strftime('%Y-%m-%d')
+ if isinstance(v,str):return ' '.join(v.replace('\u00a0',' ').split()).strip() or None
+ return v
+def n(v):
+ try:return float(v or 0)
+ except:return 0
+def d(v):
+ v=c(v)
+ if not v:return None
+ if isinstance(v,str):
+  for p in ('%Y-%m-%d','%d/%m/%Y','%d.%m.%Y','%d-%m-%Y'):
+   try:return datetime.strptime(v,p).strftime('%Y-%m-%d')
+   except ValueError:pass
+ return None
+def st(v):return {'CONCLUÍDO':'Concluído','CONCLUIDO':'Concluído','FALTA NF':'Falta NF','FALTA O PEDIDO':'Falta pedido','FALTA PEDIDO':'Falta pedido','FALTA LANÇAMENTO':'Falta lançamento','FALTA LANCAMENTO':'Falta lançamento'}.get(str(v or '').strip().upper(),str(v or 'Não informado').strip())
+a=[]
+for i,r in enumerate(w.iter_rows(min_row=3,max_col=18,values_only=True),3):
+ if not c(r[16]):continue
+ x,y,p,e,forn,o,vs,vp,vt,l,osn,req,ped,dp,nf,dnf,s,obs=r
+ a.append(dict(id=i-2,recebimento=d(x),lancamento=d(y),prefixo=c(p),equipamento=c(e),fornecedor=c(forn),orcamento=c(o),valorServico=n(vs),valorPecas=n(vp),valorTotal=n(vt) if c(vt)!=None else n(vs)+n(vp),solicitante=c(l),ordemServico=c(osn),requisicao=c(req),pedido=c(ped),dataPedido=d(dp),nf=c(nf),dataNF=d(dnf),status=st(s),observacoes=c(obs)))
+(R/'src/data/orcamentos.json').write_text(json.dumps(a,ensure_ascii=False,separators=(',',':')),encoding='utf-8')
+now=datetime.now(ZoneInfo('America/Cuiaba'));(R/'src/data/meta.json').write_text(json.dumps({'atualizadoEmTexto':now.strftime('%d/%m/%Y às %H:%M'),'linhasProcessadas':len(a),'arquivo':f.name},ensure_ascii=False,indent=2),encoding='utf-8');print(len(a))
