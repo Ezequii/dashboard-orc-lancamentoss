@@ -67,8 +67,8 @@ def status(v):
 records, errors = [], []
 for excel_row, values in enumerate(ws.iter_rows(min_row=header_row+1, max_col=18, values_only=True), start=header_row+1):
     if not any(v not in (None, '') for v in values): continue
-    # Ignora rodapes, totais e linhas auxiliares sem fornecedor e sem status.
-    if not clean(values[4]) and not clean(values[16]): continue
+    # Ignora rodapes, totais e linhas auxiliares sem status.
+    if not clean(values[16]): continue
     try:
         receb,lanc,prefixo,equip,forn,orc,serv,pecas,total,solic,osn,req,pedido,data_pedido,nf,data_nf,st,obs = values
         rec = {
