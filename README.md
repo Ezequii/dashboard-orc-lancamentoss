@@ -1,12 +1,15 @@
-# Dashboard de Orçamentos — v4.2
+# Dashboard de Orçamentos — v4.4
 
-Versão 4 Premium com seleção múltipla.
+Revisão visual completa da versão 4.3.
 
-- Etapa, líder e fornecedor permitem múltiplas escolhas.
-- Líder e fornecedor têm pesquisa interna.
-- Botões Selecionar todos, Limpar e Aplicar.
-- Resumo `primeiro selecionado +N` no filtro.
-- Chips removíveis abaixo dos filtros.
-- Tudo inicia sem seleção.
-
-Para publicar: descompacte, substitua os arquivos na pasta local do repositório `dashboard-orc-lancamentos`, faça commit e push pelo GitHub Desktop.
+## Melhorias
+- Tipografia dos filtros ampliada.
+- Seleção múltipla mantida.
+- Correção do `0` isolado quando não existem filtros ativos.
+- Nomes dos gráficos de barras reduzidos, capitalizados e truncados quando necessário.
+- Valores visíveis no final das barras.
+- Fluxo dos processos ampliado e com conectores.
+- Rosca de valor por etapa ampliada, com valor total central e legenda maior.
+- Gráfico mensal restaurado como **Recebidos x lançados**.
+- Textos da tabela, indicadores, menus e cabeçalho recalibrados.
+- Atualização automática por planilha e data da última atualização mantidas.
