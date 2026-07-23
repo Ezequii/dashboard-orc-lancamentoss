@@ -27,3 +27,58 @@ body.tvMode{background:#d9d9de;overflow:hidden}.tvMode #root{height:100vh;overfl
 .dashboardSections{display:inline-flex;background:#eef3f0;border-radius:13px;padding:4px;gap:3px;margin:0 0 14px}.dashboardSections button{border:0;background:transparent;color:#6c7871;border-radius:10px;padding:9px 15px;font:inherit;font-size:10px;font-weight:700;cursor:pointer}.dashboardSections button.active{background:#fff;color:#176e4a;box-shadow:0 4px 12px #18271f0b}.dashboardContent.normalSection .grid{margin-bottom:0}.dashboardContent.normalSection .monthly{min-height:440px}.dashboardContent.normalSection .processGrid .card{min-height:355px}.dashboardContent.tvAll{display:flex;flex-direction:column;min-height:0;flex:1}.tvMode .dashboardSections{display:none}.tvMode .dashboardContent.tvAll>.grid{flex:unset}.tvMode .dashboardContent.tvAll>.summaryGrid{height:225px;display:grid!important;grid-template-columns:1fr 1fr!important;gap:9px!important;margin-bottom:9px!important}.tvMode .dashboardContent.tvAll>.processGrid{height:195px;display:grid!important;grid-template-columns:1fr 1fr!important;gap:9px!important;margin-bottom:9px!important}.tvMode .dashboardContent.tvAll>.grid>.card{height:100%;margin:0!important;padding:12px 16px!important;overflow:hidden}.tvMode .dashboardContent.tvAll>.monthly{flex:1 1 auto;min-height:165px!important;margin:0!important}
 @media(min-width:1200px){.dashboardContent.normalSection .summaryGrid .card{min-height:365px}.dashboardContent.normalSection .processGrid .card{min-height:365px}}
 @media(max-width:700px){.dashboardSections{display:flex;width:100%;overflow-x:auto}.dashboardSections button{flex:1;white-space:nowrap}.dashboardContent.normalSection .monthly{min-height:360px}.dashboardContent.normalSection .processGrid .card{min-height:0}}
+
+/* v5.0 - TV realmente dedicada: sem sidebar, sem filtros e 100vw x 100dvh */
+body.tvMode{margin:0!important;padding:0!important;background:#f4f6f4!important;overflow:hidden!important}
+.tvMode #root{width:100vw!important;height:100dvh!important;overflow:hidden!important}
+.tvMode .app{position:fixed!important;inset:0!important;width:100vw!important;height:100dvh!important;min-height:0!important;margin:0!important;border-radius:0!important;display:block!important;overflow:hidden!important;box-shadow:none!important;background:#f4f6f4!important}
+.tvMode .app>aside{display:none!important}
+.tvMode main{width:100vw!important;height:100dvh!important;padding:clamp(10px,1.25vh,18px) clamp(14px,1.4vw,28px)!important;display:grid!important;grid-template-rows:auto auto minmax(0,1fr)!important;gap:clamp(7px,0.9vh,12px)!important;overflow:hidden!important}
+.tvMode header{height:auto!important;min-height:0!important;margin:0!important;display:block!important;position:relative!important;padding-right:clamp(150px,12vw,210px)!important}
+.tvMode header small{font-size:clamp(8px,0.62vw,12px)!important;letter-spacing:1.8px!important}
+.tvMode h1{font-size:clamp(24px,1.8vw,38px)!important;line-height:1.04!important;margin:2px 0!important}
+.tvMode header p{font-size:clamp(9px,0.72vw,14px)!important;margin:0!important}
+.tvMode .headerControls{position:absolute!important;right:0!important;top:0!important;display:block!important}
+.tvMode .headerControls>*:not(.tvModeButton){display:none!important}
+.tvMode .tvModeButton{min-height:clamp(34px,3.6vh,46px)!important;padding:0 clamp(11px,0.9vw,17px)!important;border-radius:12px!important;background:#075985!important;color:#fff!important;font-size:clamp(9px,0.68vw,13px)!important;box-shadow:0 7px 18px #07598524!important}
+.tvMode .tvModeButton svg{width:clamp(15px,1vw,20px)!important}
+.tvMode .filters{display:none!important}
+.tvMode .kpis{height:clamp(70px,9.2vh,105px)!important;min-height:0!important;margin:0!important;display:grid!important;grid-template-columns:repeat(5,minmax(0,1fr))!important;gap:clamp(7px,0.7vw,14px)!important}
+.tvMode .kpi{height:100%!important;min-height:0!important;padding:clamp(8px,1vh,14px) clamp(9px,0.8vw,16px)!important;border-radius:clamp(13px,1vw,19px)!important;display:grid!important;grid-template-columns:clamp(28px,2.1vw,42px) minmax(0,1fr)!important;grid-template-rows:1fr 1.2fr!important;column-gap:clamp(7px,0.6vw,11px)!important;align-items:center!important}
+.tvMode .kpi>div{grid-row:1/3!important;width:clamp(28px,2.1vw,42px)!important;height:clamp(28px,2.1vw,42px)!important;margin:0!important;border-radius:11px!important}
+.tvMode .kpi svg{width:clamp(15px,1.15vw,22px)!important}
+.tvMode .kpi span{font-size:clamp(8px,0.68vw,13px)!important;align-self:end!important;white-space:nowrap!important;overflow:hidden!important;text-overflow:ellipsis!important}
+.tvMode .kpi>b{font-size:clamp(17px,1.5vw,29px)!important;line-height:1!important;margin:0!important;align-self:start!important;white-space:nowrap!important;overflow:hidden!important;text-overflow:ellipsis!important}
+.tvMode .dashboardContent.tvAll{height:100%!important;min-height:0!important;display:grid!important;grid-template-columns:1fr 1fr!important;grid-template-rows:minmax(0,1.15fr) minmax(0,0.9fr) minmax(0,0.9fr)!important;gap:clamp(7px,0.8vh,12px) clamp(8px,0.7vw,14px)!important;overflow:hidden!important}
+.tvMode .dashboardContent.tvAll>.summaryGrid,.tvMode .dashboardContent.tvAll>.processGrid{display:contents!important}
+.tvMode .dashboardContent.tvAll>.monthly{grid-column:1/-1!important;grid-row:3!important}
+.tvMode .dashboardContent.tvAll>.summaryGrid>.card:nth-child(1){grid-column:1;grid-row:1}.tvMode .dashboardContent.tvAll>.summaryGrid>.card:nth-child(2){grid-column:2;grid-row:1}
+.tvMode .dashboardContent.tvAll>.processGrid>.card:nth-child(1){grid-column:1;grid-row:2}.tvMode .dashboardContent.tvAll>.processGrid>.card:nth-child(2){grid-column:2;grid-row:2}
+.tvMode .dashboardContent.tvAll .card{height:100%!important;min-height:0!important;margin:0!important;padding:clamp(9px,1vh,15px) clamp(12px,1vw,19px)!important;border-radius:clamp(14px,1vw,20px)!important;overflow:hidden!important}
+.tvMode .dashboardContent.tvAll .card h2{font-size:clamp(12px,0.92vw,17px)!important;line-height:1.1!important;margin:0 0 1px!important}
+.tvMode .dashboardContent.tvAll .cardSub{font-size:clamp(7px,0.55vw,10px)!important;line-height:1!important;margin-bottom:2px!important}
+.tvMode .summaryGrid .recharts-responsive-container{height:calc(100% - 31px)!important;min-height:0!important}
+.tvMode .barValue{font-size:clamp(9px,0.62vw,12px)!important}
+.tvMode .flow{height:calc(100% - 30px)!important;min-height:0!important;justify-content:center!important;gap:clamp(6px,0.8vw,15px)!important}
+.tvMode .flow>div{min-width:clamp(66px,6vw,108px)!important}
+.tvMode .flow b{width:clamp(44px,4.2vw,72px)!important;height:clamp(44px,4.2vw,72px)!important;border-radius:clamp(14px,1.2vw,21px)!important;font-size:clamp(15px,1.25vw,23px)!important}
+.tvMode .flow span{font-size:clamp(8px,0.64vw,12px)!important;margin-top:clamp(4px,0.6vh,8px)!important;white-space:nowrap!important}
+.tvMode .flowArrow{width:clamp(13px,1.1vw,21px)!important}
+.tvMode .pie{height:calc(100% - 30px)!important;min-height:0!important;align-items:center!important}
+.tvMode .donutWrap{height:100%!important;width:43%!important;min-height:0!important}
+.tvMode .donutWrap .recharts-responsive-container{height:100%!important;min-height:0!important}
+.tvMode .donutCenter b{font-size:clamp(12px,1vw,18px)!important}.tvMode .donutCenter span{font-size:clamp(6px,0.48vw,9px)!important}
+.tvMode .stageLegend p{font-size:clamp(8px,0.58vw,11px)!important;margin:clamp(4px,0.55vh,8px) 0!important}.tvMode .stageLegend p b{font-size:clamp(8px,0.58vw,11px)!important}
+.tvMode .monthly{padding-bottom:clamp(7px,0.8vh,12px)!important}
+.tvMode .monthly .recharts-responsive-container{height:calc(100% - 28px)!important;min-height:0!important}
+.tvMode .monthly .recharts-legend-wrapper{font-size:clamp(8px,0.58vw,11px)!important}
+
+/* Full HD com pouca altura útil (barras do navegador ou sistema visíveis). */
+@media (min-width:1500px) and (max-height:900px){
+  .tvMode main{padding-top:8px!important;padding-bottom:8px!important;gap:6px!important}.tvMode header small{display:none!important}.tvMode h1{font-size:25px!important}.tvMode header p{font-size:9px!important}.tvMode .kpis{height:68px!important}.tvMode .dashboardContent.tvAll{gap:6px 9px!important;grid-template-rows:minmax(0,1.08fr) minmax(0,.86fr) minmax(0,.82fr)!important}.tvMode .dashboardContent.tvAll .card{padding:8px 13px!important}.tvMode .flow b{width:43px!important;height:43px!important;font-size:15px!important}.tvMode .flow span{font-size:8px!important}
+}
+
+/* 4K: amplia de forma proporcional sem desperdiçar área útil. */
+@media (min-width:2500px) and (min-height:1300px){
+  .tvMode main{padding:22px 34px!important;gap:16px!important}.tvMode h1{font-size:50px!important}.tvMode header p{font-size:19px!important}.tvMode .kpis{height:145px!important}.tvMode .kpi span{font-size:17px!important}.tvMode .kpi>b{font-size:38px!important}.tvMode .dashboardContent.tvAll{gap:16px 20px!important}.tvMode .dashboardContent.tvAll .card h2{font-size:25px!important}.tvMode .dashboardContent.tvAll .cardSub{font-size:15px!important}.tvMode .barValue{font-size:17px!important}.tvMode .flow span,.tvMode .stageLegend p,.tvMode .stageLegend p b{font-size:17px!important}
+}
