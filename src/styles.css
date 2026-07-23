@@ -131,3 +131,33 @@ body.tvMode{margin:0!important;padding:0!important;background:#f4f6f4!important;
 @media (min-width:2500px) and (min-height:1300px){
   .tvMode .dashboardContent.tvAll{grid-template-rows:minmax(0,1.16fr) minmax(0,.92fr) minmax(0,1.15fr)!important}.tvMode .donutWrap{width:42%!important;height:94%!important}.tvMode .summaryGrid .recharts-cartesian-axis-tick-value{font-size:18px!important}.tvMode .summaryGrid .recharts-label-list text{font-size:18px!important}.tvMode .monthly .recharts-cartesian-axis-tick-value{font-size:16px!important}
 }
+
+/* v5.2 - polimento visual do Modo TV */
+.tvMode .tvTitleRow{display:flex;align-items:center;gap:16px;min-width:0}.tvMode .tvTitleRow h1{min-width:0}.tvMode .tvUpdated{font-size:clamp(7px,.52vw,10px);color:#7b8780;background:#fff;border-radius:999px;padding:6px 10px;white-space:nowrap;box-shadow:0 4px 12px #18271f0a}
+
+/* Rankings com melhor distribuição e leitura à distância. */
+.tvMode .summaryGrid .recharts-responsive-container{height:calc(100% - 28px)!important}.tvMode .summaryGrid .recharts-cartesian-axis-tick-value{fill:#48564f!important;font-weight:500!important}.tvMode .summaryGrid .recharts-label-list text{fill:#46534c!important}.tvMode .summaryGrid .recharts-bar-rectangle path{filter:drop-shadow(0 1px 1px rgba(15,72,48,.05))}
+
+/* Fluxo mais coeso. */
+.tvMode .flow{column-gap:clamp(8px,1vw,18px)!important}.tvMode .flowArrow{margin:0 clamp(-2px,-.1vw,0px)!important;color:#9faea6!important}.tvMode .flow b{box-shadow:0 7px 18px color-mix(in srgb,currentColor 13%,transparent)}
+
+/* Rosca e legenda aproximadas e alinhadas. */
+.tvMode .processGrid>.card:nth-child(2)>.pie{justify-content:center!important;gap:clamp(12px,2vw,38px)!important}.tvMode .donutWrap{width:36%!important;max-width:250px!important;margin:0!important;flex:0 0 auto!important}.tvMode .stageLegend{flex:0 1 48%!important;max-width:470px!important;padding:0!important}.tvMode .stageLegend p{grid-template-columns:9px minmax(110px,1fr) auto!important;column-gap:10px!important}.tvMode .stageLegend p i{width:8px!important;height:8px!important}.tvMode .stageLegend p span{white-space:nowrap!important}.tvMode .stageLegend p b{white-space:nowrap!important}
+
+/* Gráfico mensal mais forte e legível. */
+.tvMode .monthly .recharts-cartesian-grid-horizontal line{stroke:#dfe5e1!important}.tvMode .monthly .recharts-cartesian-axis-tick-value{fill:#59665f!important;font-weight:500!important}.tvMode .monthly .recharts-legend-item-text{color:#4f5d55!important}.tvMode .monthly .recharts-line-curve{filter:drop-shadow(0 1px 1px rgba(0,0,0,.05))}
+
+/* Full HD: acabamento de proporções. */
+@media (min-width:1700px) and (min-height:900px) and (max-height:1200px){
+  .tvMode .dashboardContent.tvAll{grid-template-rows:minmax(0,1.2fr) minmax(0,.91fr) minmax(0,1.2fr)!important}.tvMode .summaryGrid .recharts-responsive-container{height:calc(100% - 26px)!important}.tvMode .donutWrap{width:34%!important}.tvMode .stageLegend{flex-basis:52%!important}.tvMode .monthly .recharts-responsive-container{min-height:165px!important}
+}
+
+/* Altura reduzida: preserva o gráfico inferior. */
+@media (min-width:1500px) and (max-height:900px){
+  .tvMode .tvUpdated{display:none}.tvMode .dashboardContent.tvAll{grid-template-rows:minmax(0,1.1fr) minmax(0,.84fr) minmax(0,1.2fr)!important}.tvMode .donutWrap{width:32%!important}.tvMode .stageLegend p{margin:4px 0!important}.tvMode .monthly .recharts-responsive-container{min-height:130px!important}
+}
+
+/* 4K: distância e legenda proporcionais. */
+@media (min-width:2500px) and (min-height:1300px){
+  .tvMode .tvUpdated{font-size:15px;padding:10px 15px}.tvMode .donutWrap{max-width:390px!important}.tvMode .stageLegend{max-width:720px!important}.tvMode .stageLegend p{grid-template-columns:13px minmax(170px,1fr) auto!important;column-gap:16px!important}.tvMode .stageLegend p i{width:12px!important;height:12px!important}
+}
