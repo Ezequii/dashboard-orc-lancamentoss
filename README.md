@@ -1,16 +1,27 @@
-# Dashboard de Orçamentos — v4.9
+# Dashboard v4.8.2 — Base protegida AMAGGI
 
-## Visualização padrão
-Mantém a experiência limpa, elegante e objetiva. A Visão Geral é organizada em três seções:
+Versão completa construída sobre os arquivos reais da v4.8 enviados pelo usuário.
 
-- **Resumo:** indicadores, serviços por líder e valor por fornecedor.
-- **Processos:** fluxo dos processos e valor por etapa.
-- **Evolução:** recebidos x lançados.
+## Preservado
+- Seleção múltipla com pesquisa interna.
+- Chips removíveis.
+- Pesquisa geral e filtros por período.
+- Resumo, Processos e Evolução.
+- Acompanhamento completo com criticidade dos dias.
+- Drawer detalhado e botão de copiar orçamento.
+- Atualização Excel → JSON pelo GitHub Actions.
 
-Acompanhamento continua em sua própria aba lateral.
+## Visual
+- Neutros quentes e cards brancos inspirados na referência premium.
+- Azul AMAGGI como cor principal.
+- Dourado AMAGGI em acentos e estados discretos.
+- Card “Valor em processo” destacado em azul.
+- Sombras suaves, cantos arredondados e hierarquia limpa.
 
 ## Modo TV
-O botão **Modo TV** apresenta todos os indicadores e gráficos em uma única composição otimizada para televisão. Ao entrar, o dashboard tenta usar tela cheia e recolhe os filtros.
-
-## Atualização de dados
-Substitua `atualizar_dados/CONTROLE_DE_REQUISICOES_2026.xlsx`, faça commit e push pelo GitHub Desktop e aguarde a Action ficar verde.
+- Sidebar e filtros ocultos.
+- Ocupa 100vw × 100dvh.
+- Todos os indicadores e gráficos na mesma tela.
+- Sete posições nos rankings.
+- Rosca protegida contra corte.
+- Ajustes para Full HD e 4K.

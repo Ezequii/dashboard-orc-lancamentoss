@@ -27,3 +27,178 @@ body.tvMode{background:#d9d9de;overflow:hidden}.tvMode #root{height:100vh;overfl
 .dashboardSections{display:inline-flex;background:#eef3f0;border-radius:13px;padding:4px;gap:3px;margin:0 0 14px}.dashboardSections button{border:0;background:transparent;color:#6c7871;border-radius:10px;padding:9px 15px;font:inherit;font-size:10px;font-weight:700;cursor:pointer}.dashboardSections button.active{background:#fff;color:#176e4a;box-shadow:0 4px 12px #18271f0b}.dashboardContent.normalSection .grid{margin-bottom:0}.dashboardContent.normalSection .monthly{min-height:440px}.dashboardContent.normalSection .processGrid .card{min-height:355px}.dashboardContent.tvAll{display:flex;flex-direction:column;min-height:0;flex:1}.tvMode .dashboardSections{display:none}.tvMode .dashboardContent.tvAll>.grid{flex:unset}.tvMode .dashboardContent.tvAll>.summaryGrid{height:225px;display:grid!important;grid-template-columns:1fr 1fr!important;gap:9px!important;margin-bottom:9px!important}.tvMode .dashboardContent.tvAll>.processGrid{height:195px;display:grid!important;grid-template-columns:1fr 1fr!important;gap:9px!important;margin-bottom:9px!important}.tvMode .dashboardContent.tvAll>.grid>.card{height:100%;margin:0!important;padding:12px 16px!important;overflow:hidden}.tvMode .dashboardContent.tvAll>.monthly{flex:1 1 auto;min-height:165px!important;margin:0!important}
 @media(min-width:1200px){.dashboardContent.normalSection .summaryGrid .card{min-height:365px}.dashboardContent.normalSection .processGrid .card{min-height:365px}}
 @media(max-width:700px){.dashboardSections{display:flex;width:100%;overflow-x:auto}.dashboardSections button{flex:1;white-space:nowrap}.dashboardContent.normalSection .monthly{min-height:360px}.dashboardContent.normalSection .processGrid .card{min-height:0}}
+
+/* =========================================================
+   V4.8 BASE PROTEGIDA - AJUSTES CIRURGICOS SAMSUNG 55
+   Preserva componentes, filtros, chips, tabela e drawer.
+   ========================================================= */
+
+/* Modo normal: nunca gerar rolagem horizontal. */
+html,body,#root{max-width:100%;overflow-x:hidden}
+.app,main,.filters,.top,.filterRow,.kpis,.grid,.card,.dashboardContent{min-width:0;max-width:100%}
+.search,.search input,.multi,.date{min-width:0}
+@media(max-width:1380px) and (min-width:901px){
+  .filterRow{grid-template-columns:repeat(3,minmax(0,1fr))!important}
+  .filterRow .wide{grid-column:auto!important}
+  .filterRow .clear{min-width:0!important}
+}
+@media(max-width:1100px) and (min-width:701px){
+  .filterRow{grid-template-columns:repeat(2,minmax(0,1fr))!important}
+  .filterRow .wide{grid-column:1/-1!important}
+  .filterRow .clear{grid-column:1/-1!important}
+}
+
+/* Apenas depois de clicar em Modo TV. */
+body.tvMode{margin:0!important;background:#f4f6f4!important;overflow:hidden!important}
+.tvMode #root{width:100vw!important;height:100dvh!important;overflow:hidden!important}
+.tvMode .app{position:fixed!important;inset:0!important;width:100vw!important;height:100dvh!important;min-height:0!important;margin:0!important;border-radius:0!important;display:block!important;overflow:hidden!important;box-shadow:none!important;background:#f4f6f4!important}
+.tvMode .app>aside{display:none!important}
+.tvMode main{width:100vw!important;height:100dvh!important;padding:8px 16px 9px!important;display:grid!important;grid-template-rows:48px 70px minmax(0,1fr)!important;gap:6px!important;overflow:hidden!important}
+.tvMode header{height:48px!important;min-height:0!important;margin:0!important;padding-right:155px!important;position:relative!important}
+.tvMode header small,.tvMode header p{display:none!important}
+.tvMode h1{font-size:25px!important;line-height:1.05!important;margin:0!important}
+.tvMode .headerControls{position:absolute!important;right:0!important;top:0!important}
+.tvMode .headerControls .lastUpdate,.tvMode .tvFilterButton{display:none!important}
+.tvMode .tvModeButton{min-height:31px!important;padding:0 10px!important;font-size:9px!important;opacity:.82!important;background:#075985!important;color:#fff!important}
+.tvMode .filters{display:none!important}
+.tvMode .kpis{height:70px!important;min-height:0!important;margin:0!important;display:grid!important;grid-template-columns:repeat(5,minmax(0,1fr))!important;gap:8px!important}
+.tvMode .kpi{height:70px!important;min-height:0!important;padding:9px 11px!important;border-radius:15px!important;display:grid!important;grid-template-columns:30px minmax(0,1fr)!important;grid-template-rows:21px 1fr!important;column-gap:7px!important;align-items:center!important}
+.tvMode .kpi>div{grid-row:1/3!important;width:30px!important;height:30px!important;margin:0!important}
+.tvMode .kpi svg{width:16px!important}
+.tvMode .kpi span{font-size:9px!important;margin:0!important;align-self:end!important;color:#65736b!important}
+.tvMode .kpi>b{font-size:19px!important;margin:0!important;align-self:start!important;white-space:nowrap!important;overflow:hidden!important;text-overflow:ellipsis!important}
+.tvMode .dashboardSections{display:none!important}
+.tvMode .dashboardContent.tvAll{height:100%!important;min-height:0!important;display:grid!important;grid-template-columns:1fr 1fr!important;grid-template-rows:minmax(0,.98fr) minmax(0,.86fr) minmax(0,1.36fr)!important;gap:6px 9px!important;overflow:hidden!important}
+.tvMode .dashboardContent.tvAll>.summaryGrid,.tvMode .dashboardContent.tvAll>.processGrid{display:contents!important}
+.tvMode .summaryGrid>.card:nth-child(1){grid-column:1;grid-row:1}
+.tvMode .summaryGrid>.card:nth-child(2){grid-column:2;grid-row:1}
+.tvMode .processGrid>.card:nth-child(1){grid-column:1;grid-row:2}
+.tvMode .processGrid>.card:nth-child(2){grid-column:2;grid-row:2}
+.tvMode .dashboardContent.tvAll>.monthly{grid-column:1/-1!important;grid-row:3!important}
+.tvMode .dashboardContent.tvAll .card{height:100%!important;min-height:0!important;margin:0!important;padding:9px 13px!important;border-radius:17px!important;overflow:hidden!important}
+.tvMode .dashboardContent.tvAll .card h2{font-size:15px!important;line-height:1.1!important;margin:0!important}
+.tvMode .dashboardContent.tvAll .cardSub{font-size:8px!important;color:#65736b!important;margin-bottom:1px!important}
+
+/* Rankings: sete linhas visíveis, nomes em uma linha. */
+.tvMode .summaryGrid .recharts-responsive-container{height:calc(100% - 25px)!important;min-height:0!important}
+.tvMode .summaryGrid .recharts-wrapper,.tvMode .summaryGrid .recharts-surface{height:100%!important}
+.tvMode .summaryGrid .recharts-cartesian-axis-tick-value{font-size:12px!important;fill:#425149!important;font-weight:500!important}
+.tvMode .summaryGrid .recharts-label-list text{font-size:11px!important;fill:#425149!important;font-weight:700!important}
+
+/* Fluxo: maior e distribuído. */
+.tvMode .processGrid>.card:first-child{display:flex!important;flex-direction:column!important}
+.tvMode .flow{flex:1!important;height:auto!important;min-height:0!important;width:100%!important;align-items:center!important;justify-content:space-around!important;gap:5px!important;padding:0 7px 2px!important}
+.tvMode .flow>div{min-width:80px!important}
+.tvMode .flow b{width:52px!important;height:52px!important;border-radius:16px!important;font-size:18px!important}
+.tvMode .flow span{font-size:9px!important;font-weight:700!important;margin-top:6px!important;white-space:nowrap!important}
+.tvMode .flowArrow{width:20px!important;color:#91a198!important;stroke-width:2.3!important}
+
+/* Rosca com tamanho real mínimo e legenda próxima. */
+.tvMode .processGrid>.card:nth-child(2){display:flex!important;flex-direction:column!important}
+.tvMode .processGrid>.card:nth-child(2)>.pie{flex:1!important;height:auto!important;min-height:0!important;display:flex!important;align-items:center!important;justify-content:center!important;gap:15px!important;padding:3px 6px 7px!important;overflow:hidden!important}
+.tvMode .donutWrap{flex:0 0 175px!important;width:175px!important;height:145px!important;max-width:175px!important;max-height:145px!important;margin:0!important;align-self:center!important}
+.tvMode .donutWrap .recharts-responsive-container,.tvMode .donutWrap .recharts-wrapper,.tvMode .donutWrap .recharts-surface{width:175px!important;height:145px!important;max-height:145px!important}
+.tvMode .donutCenter b{font-size:15px!important}
+.tvMode .donutCenter span{font-size:7px!important}
+.tvMode .stageLegend{flex:0 1 55%!important;max-width:500px!important;padding:0!important}
+.tvMode .stageLegend p{grid-template-columns:8px minmax(110px,1fr) auto!important;gap:9px!important;margin:7px 0!important;font-size:9px!important}
+.tvMode .stageLegend p span,.tvMode .stageLegend p b{white-space:nowrap!important}
+.tvMode .stageLegend p b{font-size:9px!important}
+
+/* Mensal: usa toda a altura inferior. */
+.tvMode .monthly{display:flex!important;flex-direction:column!important;padding-bottom:6px!important}
+.tvMode .monthly .recharts-responsive-container{flex:1 1 auto!important;height:auto!important;min-height:0!important;margin-top:1px!important}
+.tvMode .monthly .recharts-wrapper,.tvMode .monthly .recharts-surface{height:100%!important}
+.tvMode .monthly .recharts-line-curve{stroke-width:4px!important}
+.tvMode .monthly .recharts-cartesian-axis-tick-value,.tvMode .monthly .recharts-legend-item-text{font-size:11px!important;color:#4f5d55!important;fill:#536159!important}
+.tvMode .monthly .recharts-cartesian-grid-horizontal line{stroke:#dde4df!important}
+
+/* TV 4K real. */
+@media(min-width:2500px) and (min-height:1300px){
+  .tvMode main{padding:16px 28px 18px!important;grid-template-rows:72px 110px minmax(0,1fr)!important;gap:12px!important}
+  .tvMode header{height:72px!important;padding-right:250px!important}
+  .tvMode h1{font-size:42px!important}
+  .tvMode .tvModeButton{min-height:46px!important;padding:0 18px!important;font-size:15px!important}
+  .tvMode .kpis{height:110px!important;gap:14px!important}
+  .tvMode .kpi{height:110px!important;padding:14px 18px!important;grid-template-columns:45px 1fr!important;grid-template-rows:34px 1fr!important}
+  .tvMode .kpi>div{width:45px!important;height:45px!important}.tvMode .kpi svg{width:23px!important}.tvMode .kpi span{font-size:15px!important}.tvMode .kpi>b{font-size:30px!important}
+  .tvMode .dashboardContent.tvAll{gap:12px 16px!important}
+  .tvMode .dashboardContent.tvAll .card{padding:15px 21px!important;border-radius:22px!important}
+  .tvMode .dashboardContent.tvAll .card h2{font-size:23px!important}.tvMode .dashboardContent.tvAll .cardSub{font-size:14px!important}
+  .tvMode .summaryGrid .recharts-cartesian-axis-tick-value,.tvMode .summaryGrid .recharts-label-list text{font-size:18px!important}
+  .tvMode .flow b{width:82px!important;height:82px!important;font-size:28px!important}.tvMode .flow span{font-size:15px!important}.tvMode .flowArrow{width:30px!important}
+  .tvMode .donutWrap,.tvMode .donutWrap .recharts-responsive-container,.tvMode .donutWrap .recharts-wrapper,.tvMode .donutWrap .recharts-surface{width:300px!important;height:260px!important;max-width:300px!important;max-height:260px!important}
+  .tvMode .stageLegend p,.tvMode .stageLegend p b{font-size:16px!important}.tvMode .monthly .recharts-cartesian-axis-tick-value,.tvMode .monthly .recharts-legend-item-text{font-size:16px!important}
+}
+
+/* =========================================================
+   V4.8.2 — DIRECAO VISUAL AMAGGI + REFERENCIA PREMIUM
+   Paleta: azul AMAGGI, dourado, grafite e neutros quentes.
+   ========================================================= */
+:root{
+  --amaggi-blue:#12619c;
+  --amaggi-blue-dark:#0b456f;
+  --amaggi-blue-soft:#e8f1f7;
+  --amaggi-gold:#fcca64;
+  --amaggi-gold-soft:#fff4d9;
+  --amaggi-ink:#30363a;
+  --amaggi-muted:#758087;
+  --amaggi-shell:#ebe9e2;
+  --amaggi-surface:#fffefa;
+}
+html,body{background:var(--amaggi-shell)!important;color:var(--amaggi-ink)!important}
+.app{background:#f4f3ee!important;box-shadow:0 24px 70px rgba(38,45,49,.12)!important}
+.app>aside{background:var(--amaggi-surface)!important}
+.app>aside>b{background:linear-gradient(145deg,var(--amaggi-blue),var(--amaggi-blue-dark))!important;box-shadow:0 8px 18px rgba(18,97,156,.22)!important}
+.app>aside>button{color:#707b82!important}
+.app>aside>button.on{background:var(--amaggi-blue)!important;color:#fff!important;box-shadow:0 8px 18px rgba(18,97,156,.2)!important}
+header small,.drawer>small{color:var(--amaggi-blue)!important}
+header p,.cardSub,.tableTitle small{color:var(--amaggi-muted)!important}
+.lastUpdate,.top>span{background:var(--amaggi-gold-soft)!important;color:#70531b!important;box-shadow:none!important}
+.tvModeButton,.tvFilterButton{color:var(--amaggi-blue-dark)!important;background:var(--amaggi-surface)!important}
+.tvModeButton.active{background:var(--amaggi-blue)!important;color:#fff!important}
+.search,.multi,.date,.clear,.kpi,.card{background:var(--amaggi-surface)!important}
+.search:focus-within,.multi.opened{box-shadow:0 0 0 2px rgba(18,97,156,.16),0 10px 24px rgba(18,97,156,.08)!important}
+.search svg{color:var(--amaggi-blue)!important}
+.multi em,.date em{color:#77838a!important}
+.menu{border-color:rgba(18,97,156,.12)!important;box-shadow:0 24px 58px rgba(34,45,52,.18)!important}
+.menuSearch{border-color:rgba(18,97,156,.16)!important}
+.menuActions button{background:var(--amaggi-blue-soft)!important;color:var(--amaggi-blue-dark)!important}
+.options button.selected{background:var(--amaggi-blue-soft)!important;color:var(--amaggi-blue-dark)!important}
+.options button.selected i,.menuFooter button{background:var(--amaggi-blue)!important;border-color:var(--amaggi-blue)!important;color:#fff!important}
+.chips button{background:var(--amaggi-gold-soft)!important;color:#6c5018!important}
+.clear:not(:disabled):hover{background:var(--amaggi-blue-soft)!important;color:var(--amaggi-blue-dark)!important}
+.kpi{border:1px solid rgba(18,97,156,.04)!important;box-shadow:0 7px 20px rgba(38,45,49,.045)!important}
+.kpi>div{background:var(--amaggi-blue-soft)!important;color:var(--amaggi-blue)!important}
+.kpi:nth-child(4){background:linear-gradient(145deg,var(--amaggi-blue),var(--amaggi-blue-dark))!important;color:#fff!important}
+.kpi:nth-child(4)>div{background:rgba(255,255,255,.15)!important;color:var(--amaggi-gold)!important}
+.kpi:nth-child(4) span{color:#dbeaf4!important}.kpi:nth-child(4)>b{color:#fff!important}
+.card{border:1px solid rgba(18,97,156,.045)!important;box-shadow:0 8px 24px rgba(38,45,49,.045)!important}
+.dashboardSections{background:#e8e7e0!important}
+.dashboardSections button{color:#656f75!important}
+.dashboardSections button.active{background:var(--amaggi-surface)!important;color:var(--amaggi-blue-dark)!important;box-shadow:0 4px 13px rgba(38,45,49,.08)!important}
+.barValue{fill:#56636a!important}
+.drawer{background:#f4f3ee!important}.drawer section,.values div{background:var(--amaggi-surface)!important}
+.drawer h3{color:var(--amaggi-blue)!important}.values div:last-child{background:var(--amaggi-blue)!important}
+.drawerTitle>button{background:var(--amaggi-blue-soft)!important;color:var(--amaggi-blue-dark)!important}
+.day{background:#eef1f0!important}.day.attention{background:var(--amaggi-gold-soft)!important;color:#775516!important}
+.table th{background:#f6f6f1!important}.table tbody tr:hover{background:var(--amaggi-blue-soft)!important}
+button:focus-visible,input:focus-visible{outline-color:var(--amaggi-blue)!important}
+
+/* Suavidade e proporcoes inspiradas na referencia enviada. */
+.app,.app>aside,.card,.kpi,.search,.multi,.date,.clear{transition:box-shadow .2s ease,transform .2s ease,background .2s ease}
+.card:hover{box-shadow:0 12px 30px rgba(38,45,49,.07)!important}
+.kpi:hover{transform:translateY(-1px)}
+
+/* Modo TV: identidade AMAGGI preservando leitura e composição completa. */
+body.tvMode,.tvMode .app{background:#f1f0ea!important}
+.tvMode .tvModeButton{background:var(--amaggi-blue)!important;color:#fff!important}
+.tvMode .kpi:nth-child(4){background:linear-gradient(145deg,var(--amaggi-blue),var(--amaggi-blue-dark))!important}
+.tvMode .summaryGrid .recharts-cartesian-axis-tick-value,.tvMode .summaryGrid .recharts-label-list text{fill:#3f4b52!important}
+.tvMode .monthly .recharts-cartesian-axis-tick-value{fill:#59656b!important}
+
+/* Em telas comuns, filtros quebram linhas sem criar barra horizontal. */
+@media(max-width:1500px) and (min-width:1101px){
+  .filterRow{grid-template-columns:repeat(3,minmax(0,1fr))!important}
+  .filterRow .clear{min-width:0!important}
+}
