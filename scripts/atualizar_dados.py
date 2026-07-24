@@ -36,7 +36,12 @@ for z in a:
  seen.add(k)
 text=json.dumps(a,ensure_ascii=False,separators=(',',':'));P=O/'orcamentos.json';old=P.read_text(encoding='utf-8')if P.exists()else None;changed=old!=text
 if changed:P.write_text(text,encoding='utf-8')
-M=O/'meta.json'
-if changed or not M.exists():
- now=datetime.now(ZoneInfo('America/Cuiaba'));M.write_text(json.dumps({'atualizadoEm':now.isoformat(timespec='seconds'),'atualizadoEmTexto':now.strftime('%d/%m/%Y às %H:%M'),'arquivo':F.name,'linhasProcessadas':len(a),'duplicidadesAgrupadas':dups,'alertasValidacao':len(alerts),'regraUnicidade':'fornecedor+orcamento'},ensure_ascii=False,indent=2),encoding='utf-8')
-(R/'validation-report.json').write_text(json.dumps({'alertas':alerts},ensure_ascii=False,indent=2),encoding='utf-8');print(f'OK: {len(a)} registros; {dups} duplicidades; {len(alerts)} alertas; mudou={changed}')
+now=datetime.now(ZoneInfo('America/Cuiaba'));M=O/'meta.json';old_meta=json.loads(M.read_text(encoding='utf-8'))if M.exists()else{}
+meta={'atualizadoEm':now.isoformat(timespec='seconds'),'atualizadoEmTexto':now.strftime('%d/%m/%Y às %H:%M'),'arquivo':F.name,'linhasProcessadas':len(a),'duplicidadesAgrupadas':dups,'alertasValidacao':len(alerts),'regraUnicidade':'fornecedor+orcamento'}
+if changed or not M.exists():M.write_text(json.dumps(meta,ensure_ascii=False,indent=2),encoding='utf-8')
+else:meta=old_meta
+H=O/'load-history.json';history=json.loads(H.read_text(encoding='utf-8'))if H.exists()else[]
+if changed or not history:history=(history+[meta])[-30:];H.write_text(json.dumps(history,ensure_ascii=False,indent=2),encoding='utf-8')
+summary={'criticos':sum(x['nivel']=='crítico'for x in alerts),'atencao':sum(x['nivel']=='atenção'for x in alerts),'informativos':sum(x['nivel']=='informativo'for x in alerts)}
+(O/'validation-summary.json').write_text(json.dumps(summary,ensure_ascii=False,indent=2),encoding='utf-8')
+(R/'validation-report.json').write_text(json.dumps({'resumo':summary,'alertas':alerts},ensure_ascii=False,indent=2),encoding='utf-8');print(f'OK: {len(a)} registros; {dups} duplicidades; {len(alerts)} alertas; mudou={changed}')
