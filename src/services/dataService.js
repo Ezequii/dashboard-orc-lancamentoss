@@ -1,0 +1,2 @@
+async function read(url,signal){const r=await fetch(`${url}?v=${Date.now()}`,{signal,cache:'no-store'});if(!r.ok)throw new Error(`Falha ao carregar ${url}: HTTP ${r.status}`);return r.json()}
+export async function loadDashboardData(signal){const[records,meta]=await Promise.all([read('/data/orcamentos.json',signal),read('/data/meta.json',signal)]);if(!Array.isArray(records))throw new Error('Base inválida');return{records,meta}}

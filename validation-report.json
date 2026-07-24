@@ -1,0 +1,1729 @@
+{
+  "resumo": {
+    "criticos": 1,
+    "atencao": 32,
+    "informativos": 311
+  },
+  "alertas": [
+    {
+      "nivel": "informativo",
+      "linha": 8,
+      "mensagem": "Concluído sem NF"
+    },
+    {
+      "nivel": "informativo",
+      "linha": 26,
+      "mensagem": "Concluído sem NF"
+    },
+    {
+      "nivel": "informativo",
+      "linha": 27,
+      "mensagem": "Concluído sem NF"
+    },
+    {
+      "nivel": "informativo",
+      "linha": 28,
+      "mensagem": "Concluído sem NF"
+    },
+    {
+      "nivel": "informativo",
+      "linha": 29,
+      "mensagem": "Concluído sem NF"
+    },
+    {
+      "nivel": "informativo",
+      "linha": 30,
+      "mensagem": "Concluído sem NF"
+    },
+    {
+      "nivel": "informativo",
+      "linha": 31,
+      "mensagem": "Concluído sem NF"
+    },
+    {
+      "nivel": "informativo",
+      "linha": 32,
+      "mensagem": "Concluído sem NF"
+    },
+    {
+      "nivel": "informativo",
+      "linha": 33,
+      "mensagem": "Concluído sem NF"
+    },
+    {
+      "nivel": "informativo",
+      "linha": 34,
+      "mensagem": "Concluído sem NF"
+    },
+    {
+      "nivel": "informativo",
+      "linha": 35,
+      "mensagem": "Concluído sem NF"
+    },
+    {
+      "nivel": "informativo",
+      "linha": 36,
+      "mensagem": "Concluído sem NF"
+    },
+    {
+      "nivel": "informativo",
+      "linha": 37,
+      "mensagem": "Concluído sem NF"
+    },
+    {
+      "nivel": "informativo",
+      "linha": 38,
+      "mensagem": "Concluído sem NF"
+    },
+    {
+      "nivel": "informativo",
+      "linha": 39,
+      "mensagem": "Concluído sem NF"
+    },
+    {
+      "nivel": "informativo",
+      "linha": 40,
+      "mensagem": "Concluído sem NF"
+    },
+    {
+      "nivel": "informativo",
+      "linha": 41,
+      "mensagem": "Concluído sem NF"
+    },
+    {
+      "nivel": "informativo",
+      "linha": 42,
+      "mensagem": "Concluído sem NF"
+    },
+    {
+      "nivel": "informativo",
+      "linha": 43,
+      "mensagem": "Concluído sem NF"
+    },
+    {
+      "nivel": "informativo",
+      "linha": 44,
+      "mensagem": "Concluído sem NF"
+    },
+    {
+      "nivel": "informativo",
+      "linha": 45,
+      "mensagem": "Concluído sem NF"
+    },
+    {
+      "nivel": "informativo",
+      "linha": 46,
+      "mensagem": "Concluído sem NF"
+    },
+    {
+      "nivel": "informativo",
+      "linha": 47,
+      "mensagem": "Concluído sem NF"
+    },
+    {
+      "nivel": "informativo",
+      "linha": 48,
+      "mensagem": "Concluído sem NF"
+    },
+    {
+      "nivel": "informativo",
+      "linha": 49,
+      "mensagem": "Concluído sem NF"
+    },
+    {
+      "nivel": "informativo",
+      "linha": 50,
+      "mensagem": "Concluído sem NF"
+    },
+    {
+      "nivel": "informativo",
+      "linha": 51,
+      "mensagem": "Concluído sem NF"
+    },
+    {
+      "nivel": "informativo",
+      "linha": 52,
+      "mensagem": "Concluído sem NF"
+    },
+    {
+      "nivel": "informativo",
+      "linha": 53,
+      "mensagem": "Concluído sem NF"
+    },
+    {
+      "nivel": "informativo",
+      "linha": 54,
+      "mensagem": "Concluído sem NF"
+    },
+    {
+      "nivel": "informativo",
+      "linha": 55,
+      "mensagem": "Concluído sem NF"
+    },
+    {
+      "nivel": "informativo",
+      "linha": 56,
+      "mensagem": "Concluído sem NF"
+    },
+    {
+      "nivel": "informativo",
+      "linha": 57,
+      "mensagem": "Concluído sem NF"
+    },
+    {
+      "nivel": "informativo",
+      "linha": 58,
+      "mensagem": "Concluído sem NF"
+    },
+    {
+      "nivel": "informativo",
+      "linha": 59,
+      "mensagem": "Concluído sem NF"
+    },
+    {
+      "nivel": "informativo",
+      "linha": 60,
+      "mensagem": "Concluído sem NF"
+    },
+    {
+      "nivel": "informativo",
+      "linha": 61,
+      "mensagem": "Concluído sem NF"
+    },
+    {
+      "nivel": "informativo",
+      "linha": 62,
+      "mensagem": "Concluído sem NF"
+    },
+    {
+      "nivel": "informativo",
+      "linha": 63,
+      "mensagem": "Concluído sem NF"
+    },
+    {
+      "nivel": "informativo",
+      "linha": 64,
+      "mensagem": "Concluído sem NF"
+    },
+    {
+      "nivel": "informativo",
+      "linha": 65,
+      "mensagem": "Concluído sem NF"
+    },
+    {
+      "nivel": "informativo",
+      "linha": 66,
+      "mensagem": "Concluído sem NF"
+    },
+    {
+      "nivel": "informativo",
+      "linha": 67,
+      "mensagem": "Concluído sem NF"
+    },
+    {
+      "nivel": "informativo",
+      "linha": 68,
+      "mensagem": "Concluído sem NF"
+    },
+    {
+      "nivel": "informativo",
+      "linha": 69,
+      "mensagem": "Concluído sem NF"
+    },
+    {
+      "nivel": "informativo",
+      "linha": 70,
+      "mensagem": "Concluído sem NF"
+    },
+    {
+      "nivel": "informativo",
+      "linha": 71,
+      "mensagem": "Concluído sem NF"
+    },
+    {
+      "nivel": "informativo",
+      "linha": 72,
+      "mensagem": "Concluído sem NF"
+    },
+    {
+      "nivel": "informativo",
+      "linha": 73,
+      "mensagem": "Concluído sem NF"
+    },
+    {
+      "nivel": "informativo",
+      "linha": 74,
+      "mensagem": "Concluído sem NF"
+    },
+    {
+      "nivel": "informativo",
+      "linha": 75,
+      "mensagem": "Concluído sem NF"
+    },
+    {
+      "nivel": "informativo",
+      "linha": 76,
+      "mensagem": "Concluído sem NF"
+    },
+    {
+      "nivel": "informativo",
+      "linha": 77,
+      "mensagem": "Concluído sem NF"
+    },
+    {
+      "nivel": "informativo",
+      "linha": 78,
+      "mensagem": "Concluído sem NF"
+    },
+    {
+      "nivel": "informativo",
+      "linha": 79,
+      "mensagem": "Concluído sem NF"
+    },
+    {
+      "nivel": "informativo",
+      "linha": 80,
+      "mensagem": "Concluído sem NF"
+    },
+    {
+      "nivel": "informativo",
+      "linha": 81,
+      "mensagem": "Concluído sem NF"
+    },
+    {
+      "nivel": "informativo",
+      "linha": 82,
+      "mensagem": "Concluído sem NF"
+    },
+    {
+      "nivel": "informativo",
+      "linha": 83,
+      "mensagem": "Concluído sem NF"
+    },
+    {
+      "nivel": "informativo",
+      "linha": 84,
+      "mensagem": "Concluído sem NF"
+    },
+    {
+      "nivel": "informativo",
+      "linha": 85,
+      "mensagem": "Concluído sem NF"
+    },
+    {
+      "nivel": "informativo",
+      "linha": 86,
+      "mensagem": "Concluído sem NF"
+    },
+    {
+      "nivel": "informativo",
+      "linha": 87,
+      "mensagem": "Concluído sem NF"
+    },
+    {
+      "nivel": "informativo",
+      "linha": 88,
+      "mensagem": "Concluído sem NF"
+    },
+    {
+      "nivel": "informativo",
+      "linha": 89,
+      "mensagem": "Concluído sem NF"
+    },
+    {
+      "nivel": "informativo",
+      "linha": 90,
+      "mensagem": "Concluído sem NF"
+    },
+    {
+      "nivel": "informativo",
+      "linha": 91,
+      "mensagem": "Concluído sem NF"
+    },
+    {
+      "nivel": "informativo",
+      "linha": 92,
+      "mensagem": "Concluído sem NF"
+    },
+    {
+      "nivel": "informativo",
+      "linha": 93,
+      "mensagem": "Concluído sem NF"
+    },
+    {
+      "nivel": "informativo",
+      "linha": 94,
+      "mensagem": "Concluído sem NF"
+    },
+    {
+      "nivel": "informativo",
+      "linha": 95,
+      "mensagem": "Concluído sem NF"
+    },
+    {
+      "nivel": "informativo",
+      "linha": 96,
+      "mensagem": "Concluído sem NF"
+    },
+    {
+      "nivel": "informativo",
+      "linha": 97,
+      "mensagem": "Concluído sem NF"
+    },
+    {
+      "nivel": "informativo",
+      "linha": 98,
+      "mensagem": "Concluído sem NF"
+    },
+    {
+      "nivel": "informativo",
+      "linha": 99,
+      "mensagem": "Concluído sem NF"
+    },
+    {
+      "nivel": "informativo",
+      "linha": 100,
+      "mensagem": "Concluído sem NF"
+    },
+    {
+      "nivel": "informativo",
+      "linha": 101,
+      "mensagem": "Concluído sem NF"
+    },
+    {
+      "nivel": "informativo",
+      "linha": 102,
+      "mensagem": "Concluído sem NF"
+    },
+    {
+      "nivel": "informativo",
+      "linha": 103,
+      "mensagem": "Concluído sem NF"
+    },
+    {
+      "nivel": "informativo",
+      "linha": 104,
+      "mensagem": "Concluído sem NF"
+    },
+    {
+      "nivel": "informativo",
+      "linha": 105,
+      "mensagem": "Concluído sem NF"
+    },
+    {
+      "nivel": "informativo",
+      "linha": 106,
+      "mensagem": "Concluído sem NF"
+    },
+    {
+      "nivel": "informativo",
+      "linha": 107,
+      "mensagem": "Concluído sem NF"
+    },
+    {
+      "nivel": "informativo",
+      "linha": 108,
+      "mensagem": "Concluído sem NF"
+    },
+    {
+      "nivel": "informativo",
+      "linha": 109,
+      "mensagem": "Concluído sem NF"
+    },
+    {
+      "nivel": "informativo",
+      "linha": 110,
+      "mensagem": "Concluído sem NF"
+    },
+    {
+      "nivel": "informativo",
+      "linha": 111,
+      "mensagem": "Concluído sem NF"
+    },
+    {
+      "nivel": "informativo",
+      "linha": 112,
+      "mensagem": "Concluído sem NF"
+    },
+    {
+      "nivel": "informativo",
+      "linha": 113,
+      "mensagem": "Concluído sem NF"
+    },
+    {
+      "nivel": "informativo",
+      "linha": 114,
+      "mensagem": "Concluído sem NF"
+    },
+    {
+      "nivel": "informativo",
+      "linha": 115,
+      "mensagem": "Concluído sem NF"
+    },
+    {
+      "nivel": "informativo",
+      "linha": 116,
+      "mensagem": "Concluído sem NF"
+    },
+    {
+      "nivel": "informativo",
+      "linha": 117,
+      "mensagem": "Concluído sem NF"
+    },
+    {
+      "nivel": "informativo",
+      "linha": 118,
+      "mensagem": "Concluído sem NF"
+    },
+    {
+      "nivel": "informativo",
+      "linha": 119,
+      "mensagem": "Concluído sem NF"
+    },
+    {
+      "nivel": "informativo",
+      "linha": 120,
+      "mensagem": "Concluído sem NF"
+    },
+    {
+      "nivel": "informativo",
+      "linha": 121,
+      "mensagem": "Concluído sem NF"
+    },
+    {
+      "nivel": "informativo",
+      "linha": 122,
+      "mensagem": "Concluído sem NF"
+    },
+    {
+      "nivel": "informativo",
+      "linha": 123,
+      "mensagem": "Concluído sem NF"
+    },
+    {
+      "nivel": "informativo",
+      "linha": 124,
+      "mensagem": "Concluído sem NF"
+    },
+    {
+      "nivel": "informativo",
+      "linha": 125,
+      "mensagem": "Concluído sem NF"
+    },
+    {
+      "nivel": "informativo",
+      "linha": 126,
+      "mensagem": "Concluído sem NF"
+    },
+    {
+      "nivel": "informativo",
+      "linha": 127,
+      "mensagem": "Concluído sem NF"
+    },
+    {
+      "nivel": "informativo",
+      "linha": 128,
+      "mensagem": "Concluído sem NF"
+    },
+    {
+      "nivel": "informativo",
+      "linha": 129,
+      "mensagem": "Concluído sem NF"
+    },
+    {
+      "nivel": "informativo",
+      "linha": 130,
+      "mensagem": "Concluído sem NF"
+    },
+    {
+      "nivel": "informativo",
+      "linha": 131,
+      "mensagem": "Concluído sem NF"
+    },
+    {
+      "nivel": "informativo",
+      "linha": 132,
+      "mensagem": "Concluído sem NF"
+    },
+    {
+      "nivel": "informativo",
+      "linha": 133,
+      "mensagem": "Concluído sem NF"
+    },
+    {
+      "nivel": "informativo",
+      "linha": 134,
+      "mensagem": "Concluído sem NF"
+    },
+    {
+      "nivel": "informativo",
+      "linha": 135,
+      "mensagem": "Concluído sem NF"
+    },
+    {
+      "nivel": "informativo",
+      "linha": 136,
+      "mensagem": "Concluído sem NF"
+    },
+    {
+      "nivel": "informativo",
+      "linha": 137,
+      "mensagem": "Concluído sem NF"
+    },
+    {
+      "nivel": "informativo",
+      "linha": 138,
+      "mensagem": "Concluído sem NF"
+    },
+    {
+      "nivel": "informativo",
+      "linha": 139,
+      "mensagem": "Concluído sem NF"
+    },
+    {
+      "nivel": "informativo",
+      "linha": 140,
+      "mensagem": "Concluído sem NF"
+    },
+    {
+      "nivel": "informativo",
+      "linha": 141,
+      "mensagem": "Concluído sem NF"
+    },
+    {
+      "nivel": "informativo",
+      "linha": 142,
+      "mensagem": "Concluído sem NF"
+    },
+    {
+      "nivel": "informativo",
+      "linha": 143,
+      "mensagem": "Concluído sem NF"
+    },
+    {
+      "nivel": "informativo",
+      "linha": 144,
+      "mensagem": "Concluído sem NF"
+    },
+    {
+      "nivel": "informativo",
+      "linha": 145,
+      "mensagem": "Concluído sem NF"
+    },
+    {
+      "nivel": "informativo",
+      "linha": 146,
+      "mensagem": "Concluído sem NF"
+    },
+    {
+      "nivel": "informativo",
+      "linha": 147,
+      "mensagem": "Concluído sem NF"
+    },
+    {
+      "nivel": "informativo",
+      "linha": 148,
+      "mensagem": "Concluído sem NF"
+    },
+    {
+      "nivel": "informativo",
+      "linha": 149,
+      "mensagem": "Concluído sem NF"
+    },
+    {
+      "nivel": "informativo",
+      "linha": 150,
+      "mensagem": "Concluído sem NF"
+    },
+    {
+      "nivel": "informativo",
+      "linha": 151,
+      "mensagem": "Concluído sem NF"
+    },
+    {
+      "nivel": "informativo",
+      "linha": 152,
+      "mensagem": "Concluído sem NF"
+    },
+    {
+      "nivel": "informativo",
+      "linha": 153,
+      "mensagem": "Concluído sem NF"
+    },
+    {
+      "nivel": "informativo",
+      "linha": 154,
+      "mensagem": "Concluído sem NF"
+    },
+    {
+      "nivel": "informativo",
+      "linha": 155,
+      "mensagem": "Concluído sem NF"
+    },
+    {
+      "nivel": "informativo",
+      "linha": 211,
+      "mensagem": "Concluído sem NF"
+    },
+    {
+      "nivel": "informativo",
+      "linha": 212,
+      "mensagem": "Concluído sem NF"
+    },
+    {
+      "nivel": "informativo",
+      "linha": 213,
+      "mensagem": "Concluído sem NF"
+    },
+    {
+      "nivel": "informativo",
+      "linha": 214,
+      "mensagem": "Concluído sem NF"
+    },
+    {
+      "nivel": "informativo",
+      "linha": 215,
+      "mensagem": "Concluído sem NF"
+    },
+    {
+      "nivel": "informativo",
+      "linha": 216,
+      "mensagem": "Concluído sem NF"
+    },
+    {
+      "nivel": "atenção",
+      "linha": 223,
+      "mensagem": "Orçamento ausente"
+    },
+    {
+      "nivel": "informativo",
+      "linha": 225,
+      "mensagem": "Concluído sem NF"
+    },
+    {
+      "nivel": "informativo",
+      "linha": 226,
+      "mensagem": "Concluído sem NF"
+    },
+    {
+      "nivel": "informativo",
+      "linha": 235,
+      "mensagem": "Concluído sem NF"
+    },
+    {
+      "nivel": "atenção",
+      "linha": 245,
+      "mensagem": "Orçamento ausente"
+    },
+    {
+      "nivel": "atenção",
+      "linha": 246,
+      "mensagem": "Orçamento ausente"
+    },
+    {
+      "nivel": "informativo",
+      "linha": 248,
+      "mensagem": "Concluído sem NF"
+    },
+    {
+      "nivel": "informativo",
+      "linha": 249,
+      "mensagem": "Concluído sem NF"
+    },
+    {
+      "nivel": "atenção",
+      "linha": 260,
+      "mensagem": "Orçamento ausente"
+    },
+    {
+      "nivel": "informativo",
+      "linha": 260,
+      "mensagem": "Concluído sem NF"
+    },
+    {
+      "nivel": "informativo",
+      "linha": 264,
+      "mensagem": "Concluído sem NF"
+    },
+    {
+      "nivel": "atenção",
+      "linha": 274,
+      "mensagem": "Orçamento ausente"
+    },
+    {
+      "nivel": "informativo",
+      "linha": 285,
+      "mensagem": "Concluído sem NF"
+    },
+    {
+      "nivel": "informativo",
+      "linha": 289,
+      "mensagem": "Concluído sem NF"
+    },
+    {
+      "nivel": "informativo",
+      "linha": 292,
+      "mensagem": "Concluído sem NF"
+    },
+    {
+      "nivel": "informativo",
+      "linha": 303,
+      "mensagem": "Concluído sem NF"
+    },
+    {
+      "nivel": "informativo",
+      "linha": 309,
+      "mensagem": "Concluído sem NF"
+    },
+    {
+      "nivel": "informativo",
+      "linha": 312,
+      "mensagem": "Concluído sem NF"
+    },
+    {
+      "nivel": "informativo",
+      "linha": 313,
+      "mensagem": "Concluído sem NF"
+    },
+    {
+      "nivel": "informativo",
+      "linha": 316,
+      "mensagem": "Concluído sem NF"
+    },
+    {
+      "nivel": "informativo",
+      "linha": 317,
+      "mensagem": "Concluído sem NF"
+    },
+    {
+      "nivel": "informativo",
+      "linha": 330,
+      "mensagem": "Concluído sem NF"
+    },
+    {
+      "nivel": "informativo",
+      "linha": 332,
+      "mensagem": "Concluído sem NF"
+    },
+    {
+      "nivel": "informativo",
+      "linha": 340,
+      "mensagem": "Concluído sem NF"
+    },
+    {
+      "nivel": "informativo",
+      "linha": 355,
+      "mensagem": "Concluído sem NF"
+    },
+    {
+      "nivel": "informativo",
+      "linha": 356,
+      "mensagem": "Concluído sem NF"
+    },
+    {
+      "nivel": "informativo",
+      "linha": 357,
+      "mensagem": "Concluído sem NF"
+    },
+    {
+      "nivel": "informativo",
+      "linha": 358,
+      "mensagem": "Concluído sem NF"
+    },
+    {
+      "nivel": "informativo",
+      "linha": 359,
+      "mensagem": "Concluído sem NF"
+    },
+    {
+      "nivel": "informativo",
+      "linha": 360,
+      "mensagem": "Concluído sem NF"
+    },
+    {
+      "nivel": "informativo",
+      "linha": 361,
+      "mensagem": "Concluído sem NF"
+    },
+    {
+      "nivel": "informativo",
+      "linha": 362,
+      "mensagem": "Concluído sem NF"
+    },
+    {
+      "nivel": "informativo",
+      "linha": 372,
+      "mensagem": "Concluído sem NF"
+    },
+    {
+      "nivel": "informativo",
+      "linha": 373,
+      "mensagem": "Concluído sem NF"
+    },
+    {
+      "nivel": "informativo",
+      "linha": 374,
+      "mensagem": "Concluído sem NF"
+    },
+    {
+      "nivel": "informativo",
+      "linha": 402,
+      "mensagem": "Concluído sem NF"
+    },
+    {
+      "nivel": "informativo",
+      "linha": 423,
+      "mensagem": "Concluído sem NF"
+    },
+    {
+      "nivel": "informativo",
+      "linha": 439,
+      "mensagem": "Concluído sem NF"
+    },
+    {
+      "nivel": "informativo",
+      "linha": 440,
+      "mensagem": "Concluído sem NF"
+    },
+    {
+      "nivel": "informativo",
+      "linha": 441,
+      "mensagem": "Concluído sem NF"
+    },
+    {
+      "nivel": "informativo",
+      "linha": 446,
+      "mensagem": "Concluído sem NF"
+    },
+    {
+      "nivel": "atenção",
+      "linha": 448,
+      "mensagem": "Orçamento ausente"
+    },
+    {
+      "nivel": "informativo",
+      "linha": 448,
+      "mensagem": "Concluído sem NF"
+    },
+    {
+      "nivel": "informativo",
+      "linha": 452,
+      "mensagem": "Concluído sem NF"
+    },
+    {
+      "nivel": "informativo",
+      "linha": 455,
+      "mensagem": "Concluído sem NF"
+    },
+    {
+      "nivel": "informativo",
+      "linha": 536,
+      "mensagem": "Concluído sem NF"
+    },
+    {
+      "nivel": "informativo",
+      "linha": 550,
+      "mensagem": "Concluído sem NF"
+    },
+    {
+      "nivel": "informativo",
+      "linha": 556,
+      "mensagem": "Concluído sem NF"
+    },
+    {
+      "nivel": "informativo",
+      "linha": 557,
+      "mensagem": "Concluído sem NF"
+    },
+    {
+      "nivel": "informativo",
+      "linha": 562,
+      "mensagem": "Concluído sem NF"
+    },
+    {
+      "nivel": "informativo",
+      "linha": 563,
+      "mensagem": "Concluído sem NF"
+    },
+    {
+      "nivel": "informativo",
+      "linha": 572,
+      "mensagem": "Concluído sem NF"
+    },
+    {
+      "nivel": "informativo",
+      "linha": 576,
+      "mensagem": "Concluído sem NF"
+    },
+    {
+      "nivel": "informativo",
+      "linha": 583,
+      "mensagem": "Concluído sem NF"
+    },
+    {
+      "nivel": "informativo",
+      "linha": 592,
+      "mensagem": "Concluído sem NF"
+    },
+    {
+      "nivel": "informativo",
+      "linha": 594,
+      "mensagem": "Concluído sem NF"
+    },
+    {
+      "nivel": "atenção",
+      "linha": 616,
+      "mensagem": "Orçamento ausente"
+    },
+    {
+      "nivel": "informativo",
+      "linha": 621,
+      "mensagem": "Concluído sem NF"
+    },
+    {
+      "nivel": "informativo",
+      "linha": 627,
+      "mensagem": "Concluído sem NF"
+    },
+    {
+      "nivel": "informativo",
+      "linha": 628,
+      "mensagem": "Concluído sem NF"
+    },
+    {
+      "nivel": "informativo",
+      "linha": 629,
+      "mensagem": "Concluído sem NF"
+    },
+    {
+      "nivel": "informativo",
+      "linha": 630,
+      "mensagem": "Concluído sem NF"
+    },
+    {
+      "nivel": "informativo",
+      "linha": 631,
+      "mensagem": "Concluído sem NF"
+    },
+    {
+      "nivel": "informativo",
+      "linha": 656,
+      "mensagem": "Concluído sem NF"
+    },
+    {
+      "nivel": "informativo",
+      "linha": 657,
+      "mensagem": "Concluído sem NF"
+    },
+    {
+      "nivel": "informativo",
+      "linha": 658,
+      "mensagem": "Concluído sem NF"
+    },
+    {
+      "nivel": "informativo",
+      "linha": 660,
+      "mensagem": "Concluído sem NF"
+    },
+    {
+      "nivel": "informativo",
+      "linha": 665,
+      "mensagem": "Concluído sem NF"
+    },
+    {
+      "nivel": "informativo",
+      "linha": 666,
+      "mensagem": "Concluído sem NF"
+    },
+    {
+      "nivel": "informativo",
+      "linha": 681,
+      "mensagem": "Concluído sem NF"
+    },
+    {
+      "nivel": "informativo",
+      "linha": 682,
+      "mensagem": "Concluído sem NF"
+    },
+    {
+      "nivel": "informativo",
+      "linha": 707,
+      "mensagem": "Concluído sem NF"
+    },
+    {
+      "nivel": "informativo",
+      "linha": 708,
+      "mensagem": "Concluído sem NF"
+    },
+    {
+      "nivel": "informativo",
+      "linha": 761,
+      "mensagem": "Concluído sem NF"
+    },
+    {
+      "nivel": "informativo",
+      "linha": 762,
+      "mensagem": "Concluído sem NF"
+    },
+    {
+      "nivel": "informativo",
+      "linha": 768,
+      "mensagem": "Concluído sem NF"
+    },
+    {
+      "nivel": "informativo",
+      "linha": 777,
+      "mensagem": "Concluído sem NF"
+    },
+    {
+      "nivel": "informativo",
+      "linha": 782,
+      "mensagem": "Concluído sem NF"
+    },
+    {
+      "nivel": "informativo",
+      "linha": 783,
+      "mensagem": "Concluído sem NF"
+    },
+    {
+      "nivel": "informativo",
+      "linha": 796,
+      "mensagem": "Concluído sem NF"
+    },
+    {
+      "nivel": "informativo",
+      "linha": 797,
+      "mensagem": "Concluído sem NF"
+    },
+    {
+      "nivel": "informativo",
+      "linha": 798,
+      "mensagem": "Concluído sem NF"
+    },
+    {
+      "nivel": "informativo",
+      "linha": 811,
+      "mensagem": "Concluído sem NF"
+    },
+    {
+      "nivel": "atenção",
+      "linha": 832,
+      "mensagem": "Orçamento ausente"
+    },
+    {
+      "nivel": "informativo",
+      "linha": 838,
+      "mensagem": "Concluído sem NF"
+    },
+    {
+      "nivel": "informativo",
+      "linha": 839,
+      "mensagem": "Concluído sem NF"
+    },
+    {
+      "nivel": "informativo",
+      "linha": 841,
+      "mensagem": "Concluído sem NF"
+    },
+    {
+      "nivel": "informativo",
+      "linha": 843,
+      "mensagem": "Concluído sem NF"
+    },
+    {
+      "nivel": "atenção",
+      "linha": 844,
+      "mensagem": "Orçamento ausente"
+    },
+    {
+      "nivel": "informativo",
+      "linha": 844,
+      "mensagem": "Concluído sem NF"
+    },
+    {
+      "nivel": "informativo",
+      "linha": 845,
+      "mensagem": "Concluído sem NF"
+    },
+    {
+      "nivel": "informativo",
+      "linha": 846,
+      "mensagem": "Concluído sem NF"
+    },
+    {
+      "nivel": "atenção",
+      "linha": 876,
+      "mensagem": "Orçamento ausente"
+    },
+    {
+      "nivel": "informativo",
+      "linha": 876,
+      "mensagem": "Concluído sem NF"
+    },
+    {
+      "nivel": "informativo",
+      "linha": 877,
+      "mensagem": "Concluído sem NF"
+    },
+    {
+      "nivel": "informativo",
+      "linha": 878,
+      "mensagem": "Concluído sem NF"
+    },
+    {
+      "nivel": "informativo",
+      "linha": 879,
+      "mensagem": "Concluído sem NF"
+    },
+    {
+      "nivel": "informativo",
+      "linha": 893,
+      "mensagem": "Concluído sem NF"
+    },
+    {
+      "nivel": "informativo",
+      "linha": 899,
+      "mensagem": "Concluído sem NF"
+    },
+    {
+      "nivel": "informativo",
+      "linha": 904,
+      "mensagem": "Concluído sem NF"
+    },
+    {
+      "nivel": "informativo",
+      "linha": 905,
+      "mensagem": "Concluído sem NF"
+    },
+    {
+      "nivel": "atenção",
+      "linha": 910,
+      "mensagem": "Orçamento ausente"
+    },
+    {
+      "nivel": "informativo",
+      "linha": 910,
+      "mensagem": "Concluído sem NF"
+    },
+    {
+      "nivel": "informativo",
+      "linha": 911,
+      "mensagem": "Concluído sem NF"
+    },
+    {
+      "nivel": "informativo",
+      "linha": 915,
+      "mensagem": "Concluído sem NF"
+    },
+    {
+      "nivel": "informativo",
+      "linha": 916,
+      "mensagem": "Concluído sem NF"
+    },
+    {
+      "nivel": "informativo",
+      "linha": 917,
+      "mensagem": "Concluído sem NF"
+    },
+    {
+      "nivel": "informativo",
+      "linha": 934,
+      "mensagem": "Concluído sem NF"
+    },
+    {
+      "nivel": "informativo",
+      "linha": 949,
+      "mensagem": "Concluído sem NF"
+    },
+    {
+      "nivel": "atenção",
+      "linha": 951,
+      "mensagem": "Orçamento ausente"
+    },
+    {
+      "nivel": "informativo",
+      "linha": 951,
+      "mensagem": "Concluído sem NF"
+    },
+    {
+      "nivel": "atenção",
+      "linha": 952,
+      "mensagem": "Orçamento ausente"
+    },
+    {
+      "nivel": "informativo",
+      "linha": 952,
+      "mensagem": "Concluído sem NF"
+    },
+    {
+      "nivel": "informativo",
+      "linha": 953,
+      "mensagem": "Concluído sem NF"
+    },
+    {
+      "nivel": "informativo",
+      "linha": 954,
+      "mensagem": "Concluído sem NF"
+    },
+    {
+      "nivel": "atenção",
+      "linha": 955,
+      "mensagem": "Orçamento ausente"
+    },
+    {
+      "nivel": "informativo",
+      "linha": 958,
+      "mensagem": "Concluído sem NF"
+    },
+    {
+      "nivel": "informativo",
+      "linha": 959,
+      "mensagem": "Concluído sem NF"
+    },
+    {
+      "nivel": "informativo",
+      "linha": 961,
+      "mensagem": "Concluído sem NF"
+    },
+    {
+      "nivel": "informativo",
+      "linha": 962,
+      "mensagem": "Concluído sem NF"
+    },
+    {
+      "nivel": "informativo",
+      "linha": 963,
+      "mensagem": "Concluído sem NF"
+    },
+    {
+      "nivel": "informativo",
+      "linha": 964,
+      "mensagem": "Concluído sem NF"
+    },
+    {
+      "nivel": "informativo",
+      "linha": 971,
+      "mensagem": "Concluído sem NF"
+    },
+    {
+      "nivel": "informativo",
+      "linha": 972,
+      "mensagem": "Concluído sem NF"
+    },
+    {
+      "nivel": "informativo",
+      "linha": 976,
+      "mensagem": "Concluído sem NF"
+    },
+    {
+      "nivel": "informativo",
+      "linha": 978,
+      "mensagem": "Concluído sem NF"
+    },
+    {
+      "nivel": "informativo",
+      "linha": 979,
+      "mensagem": "Concluído sem NF"
+    },
+    {
+      "nivel": "informativo",
+      "linha": 980,
+      "mensagem": "Concluído sem NF"
+    },
+    {
+      "nivel": "informativo",
+      "linha": 994,
+      "mensagem": "Concluído sem NF"
+    },
+    {
+      "nivel": "informativo",
+      "linha": 1001,
+      "mensagem": "Concluído sem NF"
+    },
+    {
+      "nivel": "informativo",
+      "linha": 1002,
+      "mensagem": "Concluído sem NF"
+    },
+    {
+      "nivel": "atenção",
+      "linha": 1010,
+      "mensagem": "Orçamento ausente"
+    },
+    {
+      "nivel": "atenção",
+      "linha": 1012,
+      "mensagem": "Orçamento ausente"
+    },
+    {
+      "nivel": "informativo",
+      "linha": 1012,
+      "mensagem": "Concluído sem NF"
+    },
+    {
+      "nivel": "informativo",
+      "linha": 1014,
+      "mensagem": "Concluído sem NF"
+    },
+    {
+      "nivel": "informativo",
+      "linha": 1015,
+      "mensagem": "Concluído sem NF"
+    },
+    {
+      "nivel": "informativo",
+      "linha": 1016,
+      "mensagem": "Concluído sem NF"
+    },
+    {
+      "nivel": "informativo",
+      "linha": 1017,
+      "mensagem": "Concluído sem NF"
+    },
+    {
+      "nivel": "informativo",
+      "linha": 1018,
+      "mensagem": "Concluído sem NF"
+    },
+    {
+      "nivel": "informativo",
+      "linha": 1019,
+      "mensagem": "Concluído sem NF"
+    },
+    {
+      "nivel": "informativo",
+      "linha": 1020,
+      "mensagem": "Concluído sem NF"
+    },
+    {
+      "nivel": "informativo",
+      "linha": 1084,
+      "mensagem": "Concluído sem NF"
+    },
+    {
+      "nivel": "informativo",
+      "linha": 1085,
+      "mensagem": "Concluído sem NF"
+    },
+    {
+      "nivel": "informativo",
+      "linha": 1086,
+      "mensagem": "Concluído sem NF"
+    },
+    {
+      "nivel": "informativo",
+      "linha": 1097,
+      "mensagem": "Concluído sem NF"
+    },
+    {
+      "nivel": "informativo",
+      "linha": 1105,
+      "mensagem": "Concluído sem NF"
+    },
+    {
+      "nivel": "atenção",
+      "linha": 1112,
+      "mensagem": "Orçamento ausente"
+    },
+    {
+      "nivel": "informativo",
+      "linha": 1112,
+      "mensagem": "Concluído sem NF"
+    },
+    {
+      "nivel": "informativo",
+      "linha": 1113,
+      "mensagem": "Concluído sem NF"
+    },
+    {
+      "nivel": "informativo",
+      "linha": 1119,
+      "mensagem": "Concluído sem NF"
+    },
+    {
+      "nivel": "informativo",
+      "linha": 1123,
+      "mensagem": "Concluído sem NF"
+    },
+    {
+      "nivel": "informativo",
+      "linha": 1150,
+      "mensagem": "Concluído sem NF"
+    },
+    {
+      "nivel": "informativo",
+      "linha": 1151,
+      "mensagem": "Concluído sem NF"
+    },
+    {
+      "nivel": "atenção",
+      "linha": 1152,
+      "mensagem": "Orçamento ausente"
+    },
+    {
+      "nivel": "informativo",
+      "linha": 1153,
+      "mensagem": "Concluído sem NF"
+    },
+    {
+      "nivel": "informativo",
+      "linha": 1161,
+      "mensagem": "Concluído sem NF"
+    },
+    {
+      "nivel": "informativo",
+      "linha": 1162,
+      "mensagem": "Concluído sem NF"
+    },
+    {
+      "nivel": "informativo",
+      "linha": 1163,
+      "mensagem": "Concluído sem NF"
+    },
+    {
+      "nivel": "atenção",
+      "linha": 1173,
+      "mensagem": "Orçamento ausente"
+    },
+    {
+      "nivel": "informativo",
+      "linha": 1173,
+      "mensagem": "Concluído sem NF"
+    },
+    {
+      "nivel": "informativo",
+      "linha": 1199,
+      "mensagem": "Concluído sem NF"
+    },
+    {
+      "nivel": "informativo",
+      "linha": 1203,
+      "mensagem": "Concluído sem NF"
+    },
+    {
+      "nivel": "informativo",
+      "linha": 1205,
+      "mensagem": "Concluído sem NF"
+    },
+    {
+      "nivel": "informativo",
+      "linha": 1211,
+      "mensagem": "Concluído sem NF"
+    },
+    {
+      "nivel": "informativo",
+      "linha": 1219,
+      "mensagem": "Concluído sem NF"
+    },
+    {
+      "nivel": "informativo",
+      "linha": 1227,
+      "mensagem": "Concluído sem NF"
+    },
+    {
+      "nivel": "informativo",
+      "linha": 1233,
+      "mensagem": "Concluído sem NF"
+    },
+    {
+      "nivel": "informativo",
+      "linha": 1235,
+      "mensagem": "Concluído sem NF"
+    },
+    {
+      "nivel": "atenção",
+      "linha": 1238,
+      "mensagem": "Orçamento ausente"
+    },
+    {
+      "nivel": "informativo",
+      "linha": 1241,
+      "mensagem": "Concluído sem NF"
+    },
+    {
+      "nivel": "informativo",
+      "linha": 1242,
+      "mensagem": "Concluído sem NF"
+    },
+    {
+      "nivel": "informativo",
+      "linha": 1244,
+      "mensagem": "Concluído sem NF"
+    },
+    {
+      "nivel": "informativo",
+      "linha": 1245,
+      "mensagem": "Concluído sem NF"
+    },
+    {
+      "nivel": "informativo",
+      "linha": 1248,
+      "mensagem": "Concluído sem NF"
+    },
+    {
+      "nivel": "informativo",
+      "linha": 1267,
+      "mensagem": "Concluído sem NF"
+    },
+    {
+      "nivel": "informativo",
+      "linha": 1270,
+      "mensagem": "Concluído sem NF"
+    },
+    {
+      "nivel": "atenção",
+      "linha": 1282,
+      "mensagem": "Orçamento ausente"
+    },
+    {
+      "nivel": "informativo",
+      "linha": 1310,
+      "mensagem": "Concluído sem NF"
+    },
+    {
+      "nivel": "informativo",
+      "linha": 1325,
+      "mensagem": "Concluído sem NF"
+    },
+    {
+      "nivel": "informativo",
+      "linha": 1343,
+      "mensagem": "Concluído sem NF"
+    },
+    {
+      "nivel": "informativo",
+      "linha": 1352,
+      "mensagem": "Concluído sem NF"
+    },
+    {
+      "nivel": "informativo",
+      "linha": 1361,
+      "mensagem": "Concluído sem NF"
+    },
+    {
+      "nivel": "atenção",
+      "linha": 1362,
+      "mensagem": "Orçamento ausente"
+    },
+    {
+      "nivel": "informativo",
+      "linha": 1373,
+      "mensagem": "Concluído sem NF"
+    },
+    {
+      "nivel": "informativo",
+      "linha": 1374,
+      "mensagem": "Concluído sem NF"
+    },
+    {
+      "nivel": "atenção",
+      "linha": 1378,
+      "mensagem": "Orçamento ausente"
+    },
+    {
+      "nivel": "atenção",
+      "linha": 1379,
+      "mensagem": "Orçamento ausente"
+    },
+    {
+      "nivel": "informativo",
+      "linha": 1386,
+      "mensagem": "Concluído sem NF"
+    },
+    {
+      "nivel": "informativo",
+      "linha": 1387,
+      "mensagem": "Concluído sem NF"
+    },
+    {
+      "nivel": "informativo",
+      "linha": 1388,
+      "mensagem": "Concluído sem NF"
+    },
+    {
+      "nivel": "informativo",
+      "linha": 1389,
+      "mensagem": "Concluído sem NF"
+    },
+    {
+      "nivel": "atenção",
+      "linha": 1393,
+      "mensagem": "Orçamento ausente"
+    },
+    {
+      "nivel": "informativo",
+      "linha": 1411,
+      "mensagem": "Concluído sem NF"
+    },
+    {
+      "nivel": "informativo",
+      "linha": 1412,
+      "mensagem": "Concluído sem NF"
+    },
+    {
+      "nivel": "informativo",
+      "linha": 1413,
+      "mensagem": "Concluído sem NF"
+    },
+    {
+      "nivel": "informativo",
+      "linha": 1417,
+      "mensagem": "Concluído sem NF"
+    },
+    {
+      "nivel": "informativo",
+      "linha": 1418,
+      "mensagem": "Concluído sem NF"
+    },
+    {
+      "nivel": "informativo",
+      "linha": 1420,
+      "mensagem": "Concluído sem NF"
+    },
+    {
+      "nivel": "informativo",
+      "linha": 1433,
+      "mensagem": "Concluído sem NF"
+    },
+    {
+      "nivel": "atenção",
+      "linha": 1751,
+      "mensagem": "Orçamento ausente"
+    },
+    {
+      "nivel": "atenção",
+      "linha": 1752,
+      "mensagem": "Orçamento ausente"
+    },
+    {
+      "nivel": "atenção",
+      "linha": 1753,
+      "mensagem": "Orçamento ausente"
+    },
+    {
+      "nivel": "atenção",
+      "linha": 2148,
+      "mensagem": "Solicitante ausente"
+    },
+    {
+      "nivel": "atenção",
+      "linha": 2148,
+      "mensagem": "Orçamento ausente"
+    },
+    {
+      "nivel": "crítico",
+      "linha": 2148,
+      "mensagem": "Valor não positivo"
+    },
+    {
+      "nivel": "atenção",
+      "linha": 2257,
+      "mensagem": "Orçamento ausente"
+    },
+    {
+      "nivel": "atenção",
+      "linha": 2316,
+      "mensagem": "Orçamento ausente"
+    }
+  ]
+}

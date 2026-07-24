@@ -1,9 +1,9 @@
 {
-  "name": "dashboard-orc-lancamentos",
-  "private": true,
-  "version": "5.0.0",
-  "type": "module",
-  "scripts": {"dev":"vite","build":"vite build","deploy":"npm run build && wrangler deploy"},
-  "dependencies": {"@vitejs/plugin-react":"latest","vite":"latest","react":"latest","react-dom":"latest","lucide-react":"latest","recharts":"latest"},
-  "devDependencies": {"wrangler":"latest"}
+  "name":"dashboard-orc-lancamentos",
+  "private":true,
+  "version":"5.5.0",
+  "type":"module",
+  "scripts":{"dev":"vite","build":"vite build","data":"python scripts/atualizar_dados.py","test":"node --test tests/*.test.js","deploy":"npm run build && wrangler deploy"},
+  "dependencies":{"@vitejs/plugin-react":"6.0.4","vite":"8.1.5","react":"19.2.4","react-dom":"19.2.4","lucide-react":"1.26.0","recharts":"3.10.0"},
+  "devDependencies":{"wrangler":"4.54.0"}
 }
