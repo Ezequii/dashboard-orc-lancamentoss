@@ -1,13 +1,15 @@
-name: Quality Gate e Atualização
+name: Dados, Quality Gate e Alertas
 on:
   push:
     branches: [main]
     paths: ['atualizar_dados/CONTROLE_DE_REQUISICOES_2026.xlsx','scripts/**','src/**','tests/**','package*.json']
+  schedule:
+    - cron: '0 11 * * 1-5'
   workflow_dispatch:
 permissions: {contents: write}
-concurrency: {group: dashboard-production-main, cancel-in-progress: true}
+concurrency: {group: dashboard-alertas-main, cancel-in-progress: true}
 jobs:
-  quality-gate:
+  processar:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
@@ -17,18 +19,16 @@ jobs:
       - uses: actions/setup-node@v4
         with: {node-version: '22', cache: npm}
       - run: pip install openpyxl==3.1.5
-      - name: Processar e validar dados
-        run: python scripts/atualizar_dados.py
+      - run: python scripts/atualizar_dados.py
+      - run: python scripts/gerar_alertas.py
       - run: npm ci
-      - name: Testes automatizados
-        run: npm test
-      - name: Build de produção
-        run: npm run build
-      - name: Commit rastreável
+      - run: npm test
+      - run: npm run build
+      - name: Commit dos dados e alertas
         run: |
-          if git diff --quiet -- public/data validation-report.json; then exit 0; fi
+          if git diff --quiet -- public/data; then exit 0; fi
           git config user.name 'github-actions[bot]'
           git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
-          git add public/data validation-report.json
-          git commit -m 'Atualiza base certificada v6.0 [skip ci]'
+          git add public/data
+          git commit -m 'Atualiza dados e alertas v6.1 [skip ci]'
           git push
