@@ -20,11 +20,11 @@ def d(v):
   except(ValueError,TypeError):pass
  return None
 def st(v):return{'CONCLUÍDO':'Concluído','CONCLUIDO':'Concluído','FALTA NF':'Falta NF','FALTA O PEDIDO':'Falta pedido','FALTA PEDIDO':'Falta pedido','FALTA LANÇAMENTO':'Falta lançamento','FALTA LANCAMENTO':'Falta lançamento'}.get(str(v or'').strip().upper(),c(v)or'Não informado')
-a=[];alerts=[]
+a=[]
 for i,r in enumerate(W.iter_rows(min_row=3,max_col=18,values_only=True),3):
  if not c(r[16]):continue
  x,y,p,e,forn,o,vs,vp,vt,l,osn,req,ped,dp,nf,dnf,s,obs=r
- z=dict(id=i-2,recebimento=d(x),lancamento=d(y),prefixo=c(p),equipamento=c(e),fornecedor=c(forn),orcamento=c(o),valorServico=n(vs),valorPecas=n(vp),valorTotal=n(vt)if c(vt)!=None else n(vs)+n(vp),solicitante=c(l),ordemServico=c(osn),requisicao=c(req),pedido=c(ped),dataPedido=d(dp),nf=c(nf),dataNF=d(dnf),status=st(s),observacoes=c(obs));a.append(z)
+ a.append(dict(id=i-2,recebimento=d(x),lancamento=d(y),prefixo=c(p),equipamento=c(e),fornecedor=c(forn),orcamento=c(o),valorServico=n(vs),valorPecas=n(vp),valorTotal=n(vt)if c(vt)!=None else n(vs)+n(vp),solicitante=c(l),ordemServico=c(osn),requisicao=c(req),pedido=c(ped),dataPedido=d(dp),nf=c(nf),dataNF=d(dnf),status=st(s),observacoes=c(obs)))
 seen=set();dups=0
 for z in a:
  k=f"{z['fornecedor']}|{z['orcamento']}"if z['orcamento']else f"LINHA|{z['id']}"
