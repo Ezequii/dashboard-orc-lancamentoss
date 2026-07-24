@@ -1,3 +1,4 @@
+import{STATUS_WEIGHT}from'../config/businessRules.js';
 export const cleanText=v=>typeof v==='string'?v.replace(/\u00a0/g,' ').replace(/\s+/g,' ').trim():v;
 export const normalizeRecord=r=>({...r,solicitante:cleanText(r.solicitante),fornecedor:cleanText(r.fornecedor),status:cleanText(r.status),orcamento:cleanText(r.orcamento)});
 export function uniqueBudgetRecords(records){const map=new Map();for(const record of records){const supplier=cleanText(record.fornecedor)||'SEM_FORNECEDOR',budget=cleanText(record.orcamento),key=budget?`${supplier}|${budget}`:`LINHA|${record.id}`;if(!map.has(key))map.set(key,record)}return[...map.values()]}
@@ -5,4 +6,4 @@ export function parseDate(value){if(!value)return null;const text=String(value).
 function safe(y,m,d){const date=new Date(y,m-1,d,12);return date.getFullYear()===y&&date.getMonth()===m-1&&date.getDate()===d?date:null}
 export const formatDate=v=>parseDate(v)?.toLocaleDateString('pt-BR')||'Não informado';
 export const daysSince=v=>{const date=parseDate(v);return date?Math.max(0,Math.floor((Date.now()-date.getTime())/86400000)):null};
-export function executiveMetrics(records){const pending=records.filter(r=>r.status!=='Concluído'),total=records.reduce((s,r)=>s+(r.valorTotal||0),0),pendingValue=pending.reduce((s,r)=>s+(r.valorTotal||0),0),critical=pending.filter(r=>(r.diasParado||0)>30),suppliers=Object.values(records.reduce((a,r)=>{const k=r.fornecedor||'Não informado';a[k]??={name:k,value:0,count:0};a[k].value+=r.valorTotal||0;a[k].count++;return a},{})).sort((a,b)=>b.value-a.value).slice(0,10),leaders=Object.values(pending.reduce((a,r)=>{const k=r.solicitante||'Não informado';a[k]??={name:k,count:0,value:0};a[k].count++;a[k].value+=r.valorTotal||0;return a},{})).sort((a,b)=>b.count-a.count).slice(0,10);return{total,pending,pendingValue,critical,suppliers,leaders,completionRate:records.length?Math.round((records.length-pending.length)/records.length*100):0}}
+export const sortOperational=(a,b)=>(STATUS_WEIGHT[a.status]??99)-(STATUS_WEIGHT[b.status]??99)||(b.diasParado||0)-(a.diasParado||0);
