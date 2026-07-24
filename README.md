@@ -1,11 +1,12 @@
-# Dashboard AMAGGI v5.7 — Acompanhamento Operacional
+# Dashboard AMAGGI v5.8 — Analytics e Comparações
 
-- Filtro por criticidade de SLA.
-- Ordenação por dias, valor e fornecedor.
-- Seleção múltipla de registros.
-- Exportação do conjunto selecionado ou filtrado.
-- Tempo entre recebimento, lançamento, pedido e NF no drawer.
-- SLA centralizado e testado.
-- Regra de unicidade documentada.
-- Dados externos ao bundle e GitHub Actions com testes.
-- Visual AMAGGI, visão geral, filtros, chips e Modo TV preservados.
+- Nova aba Analytics.
+- Backlog atual em quantidade e valor.
+- Pendências acima de 30 dias.
+- Percentual de pendências dentro de 15 dias.
+- Backlog por faixa de idade.
+- Tempo médio entre recebimento, lançamento, pedido e NF.
+- Ranking de líderes por pendências, críticos e valor.
+- SLA, datas, normalização e deduplicação centralizados.
+- Testes automatizados e GitHub Actions com testes antes do build.
+- Visual AMAGGI, filtros, visão geral, acompanhamento, drawer e Modo TV preservados.

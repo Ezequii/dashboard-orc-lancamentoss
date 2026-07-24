@@ -1,4 +1,4 @@
-import{SLA}from'../config/businessRules.js';
+import{SLA,AGE_BUCKETS}from'../config/businessRules.js';
 export const cleanText=v=>typeof v==='string'?v.replace(/\u00a0/g,' ').replace(/\s+/g,' ').trim():v;
 export const normalizeRecord=r=>({...r,solicitante:cleanText(r.solicitante),fornecedor:cleanText(r.fornecedor),status:cleanText(r.status),orcamento:cleanText(r.orcamento)});
 export function uniqueBudgetRecords(records){const map=new Map();for(const record of records){const supplier=cleanText(record.fornecedor)||'SEM_FORNECEDOR',budget=cleanText(record.orcamento),key=budget?`${supplier}|${budget}`:`LINHA|${record.id}`;if(!map.has(key))map.set(key,record)}return[...map.values()]}
@@ -7,6 +7,5 @@ function safe(y,m,d){const date=new Date(y,m-1,d,12);return date.getFullYear()==
 export const formatDate=v=>parseDate(v)?.toLocaleDateString('pt-BR')||'Não informado';
 export const daysSince=v=>{const date=parseDate(v);return date?Math.max(0,Math.floor((Date.now()-date.getTime())/86400000)):null};
 export const criticality=n=>n==null?'normal':n>SLA.high?'critical':n>SLA.attention?'high':n>SLA.normal?'attention':'normal';
-export const slaTone=n=>'day '+criticality(n);
-export function stageDuration(start,end){const a=parseDate(start),b=parseDate(end);return a&&b?Math.max(0,Math.floor((b-a)/86400000)):null}
-export function exportCsv(records){const cols=['status','diasParado','recebimento','orcamento','fornecedor','solicitante','valorTotal'];const q=v=>`"${String(v??'').replaceAll('"','""')}"`;return'\ufeff'+[cols.join(';'),...records.map(r=>cols.map(c=>q(r[c])).join(';'))].join('\n')}
+export const stageDuration=(a,b)=>{const start=parseDate(a),end=parseDate(b);return start&&end?Math.max(0,Math.floor((end-start)/86400000)):null};
+export function analytics(records){const pending=records.filter(r=>r.status!=='Concluído'),bucketData=AGE_BUCKETS.map(bucket=>{const rows=pending.filter(r=>r.diasParado!=null&&r.diasParado>=bucket.min&&r.diasParado<=bucket.max);return{name:bucket.label,count:rows.length,value:rows.reduce((s,r)=>s+(r.valorTotal||0),0),fill:bucket.color,key:bucket.key}}),averages=[['Recebimento → lançamento','recebimento','lancamento'],['Lançamento → pedido','lancamento','dataPedido'],['Pedido → NF','dataPedido','dataNF']].map(([name,a,b])=>{const values=records.map(r=>stageDuration(r[a],r[b])).filter(v=>v!=null);return{name,value:values.length?Number((values.reduce((s,v)=>s+v,0)/values.length).toFixed(1)):0}}),leaders=Object.values(pending.reduce((acc,r)=>{const name=r.solicitante||'Não informado';acc[name]??={name,pendencias:0,valor:0,criticos:0};acc[name].pendencias++;acc[name].valor+=r.valorTotal||0;if((r.diasParado||0)>30)acc[name].criticos++;return acc},{})).sort((a,b)=>b.pendencias-a.pendencias).slice(0,8);return{pending,bucketData,averages,leaders}}
