@@ -1,10 +1,13 @@
-# Dashboard AMAGGI v5.5 — Estabilidade e Produtividade
+# Dashboard AMAGGI v5.6 — Arquitetura Consolidada
 
-- Exportação CSV respeitando filtros ativos.
-- Filtros salvos no navegador.
-- Paginação de 50, 100 ou 200 registros.
-- SLA centralizado e reutilizável.
-- Testes automatizados de datas, limpeza, deduplicação, SLA e exportação.
-- Alertas internos classificados por criticidade.
-- Dados externos ao bundle e automação GitHub Actions com testes.
-- Sidebar expansível, filtros múltiplos, chips, acompanhamento, drawer e Modo TV preservados.
+## Estrutura
+- Componentes separados para Sidebar, estados de carregamento/erro e produtividade.
+- Serviços de dados isolados.
+- Utilitários de datas, normalização, SLA, deduplicação e CSV.
+- Design tokens AMAGGI centralizados.
+- CSS separado em tokens, legado protegido e arquitetura.
+- Regra de unicidade documentada como `fornecedor + orçamento`.
+- Testes automatizados e GitHub Actions com teste antes do build.
+
+## Preservado
+Filtros múltiplos, chips, visão geral, acompanhamento, drawer, atualização Excel → JSON e Modo TV.

@@ -38,5 +38,5 @@ text=json.dumps(a,ensure_ascii=False,separators=(',',':'));P=O/'orcamentos.json'
 if changed:P.write_text(text,encoding='utf-8')
 M=O/'meta.json'
 if changed or not M.exists():
- now=datetime.now(ZoneInfo('America/Cuiaba'));M.write_text(json.dumps({'atualizadoEm':now.isoformat(timespec='seconds'),'atualizadoEmTexto':now.strftime('%d/%m/%Y às %H:%M'),'arquivo':F.name,'linhasProcessadas':len(a),'duplicidadesAgrupadas':dups,'alertasValidacao':len(alerts)},ensure_ascii=False,indent=2),encoding='utf-8')
-(R/'validation-report.json').write_text(json.dumps({'resumo':{'criticos':sum(x['nivel']=='crítico'for x in alerts),'atencao':sum(x['nivel']=='atenção'for x in alerts),'informativos':sum(x['nivel']=='informativo'for x in alerts)},'alertas':alerts},ensure_ascii=False,indent=2),encoding='utf-8');print(f'OK: {len(a)} registros; {dups} duplicidades; {len(alerts)} alertas; mudou={changed}')
+ now=datetime.now(ZoneInfo('America/Cuiaba'));M.write_text(json.dumps({'atualizadoEm':now.isoformat(timespec='seconds'),'atualizadoEmTexto':now.strftime('%d/%m/%Y às %H:%M'),'arquivo':F.name,'linhasProcessadas':len(a),'duplicidadesAgrupadas':dups,'alertasValidacao':len(alerts),'regraUnicidade':'fornecedor+orcamento'},ensure_ascii=False,indent=2),encoding='utf-8')
+(R/'validation-report.json').write_text(json.dumps({'alertas':alerts},ensure_ascii=False,indent=2),encoding='utf-8');print(f'OK: {len(a)} registros; {dups} duplicidades; {len(alerts)} alertas; mudou={changed}')
