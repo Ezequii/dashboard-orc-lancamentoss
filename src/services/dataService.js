@@ -1,2 +1,2 @@
-async function read(url,signal){const r=await fetch(`${url}${url.includes('?')?'&':'?'}v=${Date.now()}`,{signal,cache:'no-store'});if(!r.ok)throw new Error(await r.text()||`HTTP ${r.status}`);return r.json()}
-export async function loadDashboardData(signal){try{return await read('/api/sharepoint-data',signal)}catch(error){const[records,meta]=await Promise.all([read('/data/orcamentos.json',signal),read('/data/meta.json',signal)]);return{records,meta:{...meta,origem:'Base publicada de contingência',syncError:error.message},fallback:true}}}
+async function read(url,signal){const r=await fetch(`${url}?v=${Date.now()}`,{signal,cache:'no-store'});if(!r.ok)throw new Error(`Falha ao carregar ${url}: HTTP ${r.status}`);return r.json()}
+export async function loadDashboardData(signal){const[records,meta]=await Promise.all([read('/data/orcamentos.json',signal),read('/data/meta.json',signal)]);return{records,meta}}

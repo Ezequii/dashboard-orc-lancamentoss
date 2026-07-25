@@ -1,15 +1,22 @@
-# Dashboard AMAGGI v6.2.3 — Fonte Compartilhada SharePoint
+# Dashboard AMAGGI v6.2.5 — Sem Node.js no computador
 
-O dashboard lê uma única planilha corporativa no SharePoint para todos os usuários.
+## Requisitos no computador
 
-A URL informada já está em `wrangler.jsonc`. Para ativar, configure no Cloudflare Pages os secrets:
+- Python 3.12
+- Git for Windows ou GitHub Desktop com o comando `git` disponível
+- **Node.js não é necessário no computador**
 
-- `ENTRA_TENANT_ID`
-- `ENTRA_CLIENT_ID`
-- `ENTRA_CLIENT_SECRET`
+## Como funciona
 
-O aplicativo Microsoft Entra precisa de permissão de aplicação para ler o arquivo no SharePoint, com consentimento administrativo. Recomenda-se restringir o acesso ao site necessário.
+1. O Python converte a planilha em `public/data/orcamentos.json` e `meta.json`.
+2. O arquivo BAT cria o commit e faz o push pelo Git.
+3. O Cloudflare conectado ao GitHub executa o build no servidor.
+4. Todos os usuários recebem a atualização.
 
-Após configurar, qualquer alteração salva na planilha central será vista por todos ao abrir o dashboard ou clicar em **Atualizar agora**. Se a integração falhar, o painel usa a base publicada de contingência e mostra o motivo.
+## Uso
 
-Nunca coloque o Client Secret no repositório ou no ZIP.
+Primeira vez: `CONFIGURAR_PRIMEIRA_VEZ_SEM_NODE.bat`
+
+Atualizações: substitua a planilha e execute `ATUALIZAR_E_ENVIAR_SEM_NODE.bat`.
+
+A pasta precisa ser o repositório Git clonado, contendo a subpasta `.git`. Não execute em uma cópia ZIP isolada.
