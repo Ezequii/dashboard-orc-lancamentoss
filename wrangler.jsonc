@@ -1,1 +1,9 @@
-{"$schema":"./node_modules/wrangler/config-schema.json","name":"dashboard-orc-lancamentos","compatibility_date":"2026-07-24","assets":{"directory":"./dist","not_found_handling":"single-page-application"}}
+{
+  "$schema":"./node_modules/wrangler/config-schema.json",
+  "name":"dashboard-amaggi-sharepoint",
+  "compatibility_date":"2026-07-24",
+  "pages_build_output_dir":"./dist",
+  "vars":{
+    "SHAREPOINT_FILE_URL":"https://amaggicombr.sharepoint.com/:x:/r/sites/SharepointFSFazendaItamarati/Documento/PCM/--%20CONTROLES/CONTROLE_DE_REQUISICOES_2026.xlsx?d=wca0e1cba87d1429b8ac59c7a236b49aa&csf=1&web=1&e=Jfa2R6"
+  }
+}

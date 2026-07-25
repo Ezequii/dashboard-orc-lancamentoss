@@ -1,23 +1,15 @@
-# Dashboard AMAGGI v6.1.1 Corrigido
+# Dashboard AMAGGI v6.2.3 — Fonte Compartilhada SharePoint
 
-Correções desta entrega:
+O dashboard lê uma única planilha corporativa no SharePoint para todos os usuários.
 
-- Planilha atualiza `public/data/orcamentos.json` e `public/data/meta.json`.
-- GitHub Actions monitora exatamente a planilha da pasta `atualizar_dados`.
-- Workflow executa conversão, testes, build, commit, rebase e push.
-- Removida a dependência de `health.json`, evitando o conflito “file does not exist on main”.
-- Fontes aumentadas no desktop, Full HD, TV, tabelas, cards, filtros e drawer.
-- Fluxo fixado nesta ordem operacional:
-  1. Não lançado
-  2. Sem pedido
-  3. Sem NF
-  4. Concluído
-- Acompanhamento usa a mesma ordem; dentro de cada etapa, mostra primeiro quem tem mais dias parado.
+A URL informada já está em `wrangler.jsonc`. Para ativar, configure no Cloudflare Pages os secrets:
 
-## Como atualizar
+- `ENTRA_TENANT_ID`
+- `ENTRA_CLIENT_ID`
+- `ENTRA_CLIENT_SECRET`
 
-Substitua somente o arquivo:
+O aplicativo Microsoft Entra precisa de permissão de aplicação para ler o arquivo no SharePoint, com consentimento administrativo. Recomenda-se restringir o acesso ao site necessário.
 
-`atualizar_dados/CONTROLE_DE_REQUISICOES_2026.xlsx`
+Após configurar, qualquer alteração salva na planilha central será vista por todos ao abrir o dashboard ou clicar em **Atualizar agora**. Se a integração falhar, o painel usa a base publicada de contingência e mostra o motivo.
 
-Depois faça commit e push. O workflow `Atualizar planilha e publicar dashboard` cuidará do restante.
+Nunca coloque o Client Secret no repositório ou no ZIP.
