@@ -6,7 +6,7 @@
   "d1_databases": [{
     "binding": "DB",
     "database_name": "dashboard-os",
-    "database_id": "COLE_AQUI_O_UUID_REAL_DO_D1"
+    "database_id": "8a31c747-4d83-4a22-8c16-7bcaf091fa46"
   }],
   "r2_buckets": [{
     "binding": "FILES",
