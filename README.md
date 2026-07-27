@@ -1,22 +1,31 @@
-# Dashboard AMAGGI v6.2.5 — Sem Node.js no computador
+# Dashboard PCM OS - V1 com substituicao integral
 
-## Requisitos no computador
+## Comportamento da importacao
+A nova carga e validada no navegador e novamente no servidor. Os registros sao gravados em `staging_orders`. A tabela ativa `orders` so e apagada depois que a quantidade esperada e a quantidade gravada forem iguais e não houver erros. Se qualquer etapa falhar, a base anterior permanece intacta.
 
-- Python 3.12
-- Git for Windows ou GitHub Desktop com o comando `git` disponível
-- **Node.js não é necessário no computador**
+### Bloqueios
+- arquivo ausente, corrompido ou sem `Planilha1`;
+- colunas obrigatorias ausentes;
+- nenhuma ordem valida;
+- Ordem ou Data de entrada ausente/invalida;
+- numero de Ordem duplicado com dados divergentes;
+- divergencia entre contagem validada e contagem gravada no D1;
+- queda superior a 50% sem confirmacao explicita.
 
-## Como funciona
+### Avisos
+- notificador nao localizado;
+- prefixo vazio;
+- centro vazio ou desconhecido;
+- OFICINA aberta sem texto iniciado por RC.
 
-1. O Python converte a planilha em `public/data/orcamentos.json` e `meta.json`.
-2. O arquivo BAT cria o commit e faz o push pelo Git.
-3. O Cloudflare conectado ao GitHub executa o build no servidor.
-4. Todos os usuários recebem a atualização.
+## Atualizacao no GitHub
+Substitua os arquivos do repositorio pelos deste pacote. Renomeie `wrangler.example.jsonc` para `wrangler.jsonc` e informe o UUID real do D1. Nunca deixe numeros ou texto fora das chaves do JSON.
 
-## Uso
+## D1
+Execute o conteudo de `migrations/0001_initial.sql` no Console do D1. Se as tabelas antigas ja existirem com outra estrutura, para uma V1 limpa, apague as tabelas antigas e execute esta migracao novamente.
 
-Primeira vez: `CONFIGURAR_PRIMEIRA_VEZ_SEM_NODE.bat`
+## Cloudflare Pages
+Build: `npm run build`
+Deploy: `CLOUDFLARE_API_TOKEN="$PAGES_API_TOKEN" npx wrangler pages deploy dist --project-name=dashboard-pcm-os --branch=main`
 
-Atualizações: substitua a planilha e execute `ATUALIZAR_E_ENVIAR_SEM_NODE.bat`.
-
-A pasta precisa ser o repositório Git clonado, contendo a subpasta `.git`. Não execute em uma cópia ZIP isolada.
+O bucket R2 deve se chamar `dashboard-os-importacoes`. Depois de uma substituicao concluida, os arquivos originais de importacoes anteriores sao removidos do R2, mas o historico resumido fica no D1.

@@ -1,0 +1,10 @@
+import {Env,json,centers} from '../_lib';
+export const onRequestGet:PagesFunction<Env>=async({request,env})=>{const u=new URL(request.url),start=u.searchParams.get('start')||new Date().toISOString().slice(0,10),end=u.searchParams.get('end')||start;const one=async(s:string,...a:any[])=>env.DB.prepare(s).bind(...a).first<any>();const all=async(s:string,...a:any[])=>(await env.DB.prepare(s).bind(...a).all<any>()).results;
+const opened=(await one('SELECT COUNT(*) n FROM orders WHERE entry_date BETWEEN ? AND ?',start,end))?.n||0;
+const closed=(await one('SELECT COUNT(*) n FROM orders WHERE is_closed=1 AND entry_date BETWEEN ? AND ?',start,end))?.n||0;
+const pending=(await one('SELECT COUNT(*) n FROM orders WHERE is_closed=0'))?.n||0;
+const topNotifiers=await all("SELECT COALESCE(NULLIF(notifier,''),'Nao localizado') name,COUNT(*) value FROM orders WHERE entry_date BETWEEN ? AND ? GROUP BY name ORDER BY value DESC LIMIT 5",start,end);
+const topEquipment=await all("SELECT COALESCE(NULLIF(equipment,''),'Sem prefixo') name,COUNT(*) value FROM orders WHERE entry_date BETWEEN ? AND ? GROUP BY name ORDER BY value DESC LIMIT 5",start,end);
+const cr=await all("SELECT COALESCE(NULLIF(work_center,''),'SEM CENTRO') code,COUNT(*) value FROM orders WHERE is_closed=0 GROUP BY code ORDER BY value DESC LIMIT 5");const centerRows=cr.map((x:any)=>({...x,name:centers[x.code]||'Centro nao mapeado'}));
+const followUp=await all("SELECT COALESCE(NULLIF(notifier,''),'Nao localizado') name,COUNT(*) opened,SUM(CASE WHEN is_closed=0 THEN 1 ELSE 0 END) stillOpen FROM orders WHERE entry_date BETWEEN ? AND ? GROUP BY name ORDER BY opened DESC LIMIT 5",start,end);
+const office=(await one('SELECT COUNT(*) n FROM orders WHERE office_without_rc=1 AND is_closed=0'))?.n||0;const lastImport=await one("SELECT completed_at,imported_by FROM import_runs WHERE status='completed' ORDER BY completed_at DESC LIMIT 1");return json({kpis:{opened,closed,pending,balance:opened-closed},topNotifiers,topEquipment,centers:centerRows,followUp,officeWithoutRC:office,lastImport});};

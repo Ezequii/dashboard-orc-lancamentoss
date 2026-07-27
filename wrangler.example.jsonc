@@ -1,0 +1,15 @@
+{
+  "$schema": "./node_modules/wrangler/config-schema.json",
+  "name": "dashboard-pcm-os",
+  "compatibility_date": "2026-07-25",
+  "pages_build_output_dir": "./dist",
+  "d1_databases": [{
+    "binding": "DB",
+    "database_name": "dashboard-os",
+    "database_id": "COLE_AQUI_O_UUID_REAL_DO_D1"
+  }],
+  "r2_buckets": [{
+    "binding": "FILES",
+    "bucket_name": "dashboard-os-importacoes"
+  }]
+}

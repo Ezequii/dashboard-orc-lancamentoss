@@ -1,0 +1,2 @@
+import {Env,json} from '../_lib';
+export const onRequestGet:PagesFunction<Env>=async({request,env})=>{const q=(new URL(request.url).searchParams.get('q')||'').trim(),like=`%${q}%`;return json((await env.DB.prepare("SELECT order_no,notification_no,notifier,equipment,work_center,entry_date,is_closed,description FROM orders WHERE ?='' OR order_no LIKE ? OR notification_no LIKE ? OR notifier LIKE ? OR equipment LIKE ? OR description LIKE ? ORDER BY entry_date DESC LIMIT 200").bind(q,like,like,like,like,like).all()).results);};
