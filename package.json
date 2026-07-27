@@ -6,7 +6,9 @@
   "scripts": {
     "build": "tsc -b && vite build",
     "dev": "vite",
-    "cf:dev": "npm run build && wrangler pages dev dist"
+    "cf:dev": "npm run build && wrangler pages dev dist",
+    "deploy": "npm run build && wrangler deploy",
+    "preview": "npm run build && wrangler dev"
   },
   "dependencies": {
     "@vitejs/plugin-react": "latest",
@@ -16,11 +18,12 @@
     "xlsx": "latest"
   },
   "devDependencies": {
-    "@cloudflare/workers-types": "latest",
+    "@cloudflare/vite-plugin": "^1.47.0",
+    "@cloudflare/workers-types": "^5.20260727.1",
     "@types/react": "latest",
     "@types/react-dom": "latest",
     "typescript": "latest",
     "vite": "latest",
-    "wrangler": "latest"
+    "wrangler": "^4.114.0"
   }
 }
